@@ -1,11 +1,13 @@
 /*Current fonts
 Inter - main
 Nunito - cute
-Caveat - Handwrite
+Caveat - handwriting
 Dansing-Script - pretty
 */
+
+
 body{
-    background-image: url(Image/Bliss.png);
+    background-image: url(img/Bliss.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,7 +15,9 @@ body{
     margin: 0;
     display: flex;
     font-family: "Inter",Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
+
 
 /*Flowers*/
 /**/
@@ -26,6 +30,10 @@ body{
     gap: 20px;
     margin: 20px;
     flex-wrap: wrap;
+
+    /*uhhhhhhh why not?*/
+    user-select: none;
+
 }
 
 .appPot > div{
@@ -43,12 +51,15 @@ body{
     position: absolute;
     overflow: hidden;
     border: none;
+
 }
 
 
 
 .appPot div > button > img{
     position: absolute;
+    width: 70px;
+    height: 70px;
     top: 0px;
     left: 0px;
 }
@@ -62,7 +73,7 @@ body{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.556);
 }
 
-/*Trees*/
+/*Trak bar*/
 
 .taskBar{
     background-color: blueviolet;
@@ -74,6 +85,7 @@ body{
     align-items: center;
     justify-content: space-between;
     height: fit-content;
+    z-index: 184;
 }
 
 .taskBar > button{
@@ -85,3 +97,45 @@ body{
     width: 100px;
 }
 
+
+/*Application popup*/
+
+.flowers{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    z-index: 2;
+}
+
+.handle{
+    user-select: none;
+    background-color: rgb(4, 4, 213);
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+}
+
+.handle > div {
+    position: absolute;
+    color: white;
+    top: -75%;
+    left: 5px;
+    
+}
+
+.handle > .Xbutton {
+    height: 100%;
+    background-color: red;
+    color: white;
+    border: none;
+    width: 40px;
+    right: 0;
+}
+
+.handle > .fullButton {
+    border: none;
+}

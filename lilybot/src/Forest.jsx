@@ -1,10 +1,16 @@
 //Forest -> App -> main
 
+import { useState } from 'react';
+import Lily from './Garden/Lily.jsx'
+
+
 function Forest() {
   
+  const [isBloom, setIsBloom] = useState(false);
 
-  function test() {
-    console.log("ok");
+
+  const lilyHarvest = () =>  {
+      setIsBloom(!isBloom);
   }
 
 
@@ -13,8 +19,8 @@ function Forest() {
    
       <div className="appPot">
         <div className="app-lily">
-          <button className="desktop-lily"><img src="https://placehold.co/70"/></button>
-          <p> Lily Bot </p>
+          <button className="desktop-lily"><img src="https://placehold.co/70" onClick={lilyHarvest}/></button>
+          <p> MyComputer </p>
         </div>
 
         <div className="app-Iris">
@@ -29,21 +35,25 @@ function Forest() {
 
         <div className="app-Rose">
           <button className="desktop-Rose"><img src="https://placehold.co/70"/></button>
-          <p> Ca     </p>
+          <p> Carntion</p>
         </div>
 
        <div className="app-Gardener">
-          <button className="desktop-Gardener" onClick={test}><img src="https://placehold.co/70"/></button>
+          <button className="desktop-Gardener" ><img src="/img/Banana.png"/></button>
           <p> Settings </p>
         </div>
 
       </div>
 
 
+
       <div className="taskBar">
         <button className="power">O</button>
         <button className="menu">Menu</button>
       </div>
+
+      {/*App pop ups*/}
+      {isBloom && <Lily onClick={lilyHarvest}/>}
 
 
 
