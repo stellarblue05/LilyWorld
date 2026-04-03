@@ -1,0 +1,329 @@
+.carnation{
+    --white-carnation: rgb(255, 254, 239);
+    --light-carnation: rgb(255, 253, 208);
+    --primary-carnation: #ffed86;
+    --dark-carnation:  #F4C430;
+    --very-dark-carnation:  #cc780b;
+    --black-carnation: #3D3900;
+}
+.carnation .handle{
+     background: linear-gradient(180deg,var(--dark-carnation), var(--very-dark-carnation));
+    padding-bottom: 10px;
+    border-radius: 3px;
+     border: #fff12a45 solid 2px;
+   
+}
+
+
+
+.carnation .handle .Xbutton{
+    background-color: #d05d24;
+    font-weight: 600;
+    height: 30px;
+}
+
+.carnation .handle .Xbutton:hover{
+    background-color: #c75426;
+}
+
+.carnation .handle .fullButton{
+    background-color: #ffecc6;
+    height: 30px;
+    width: 30px;
+}
+
+.carnation .handle .fullButton:hover{
+    background-color: #ffe2b9;
+}
+
+.carnation .handle div{
+    top: -18px;
+    font-weight: 600;
+    font-family: "Nunito",Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    background: var(--primary-carnation);
+    border-radius: 20px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 10px;
+    z-index: 9;
+}
+
+.carnation .handle div p {
+    margin-bottom: 15px;
+    color: var(--black-carnation);
+}
+
+.carnation .handle div:hover{
+    font-style: italic;
+}
+
+.carnation .appbody{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    color: var(--black-carnation);
+    border-radius: 3px;
+    cursor: url('/img/Cursor.png'), auto;
+}
+
+.carnation .header{
+
+    height: 25%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/Happy.png);
+    color: white;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.carnation .header p {
+    margin-left: 25px;
+    color: rgba(255, 255, 255, 0.905);
+}
+
+.carnation .header h1{
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+.carnation .appbody::selection{
+    background-color: var(--dark-carnation);
+    color: white;
+}
+
+
+
+.carnation .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carnation .firstBox{
+    display: flex;
+    max-width: 500px;
+    background-color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 99%;
+    background-color: white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.216);
+    height: 50px;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: space-between;
+}
+
+
+
+.carnation .firstBox button{
+    border: none;
+    border-radius: 30px;
+    height: 80%;
+    margin-left: 5px;
+    color: #3d1900;
+    transition: .2s;
+    margin-right: 5px;
+}
+
+.carnation .firstBox button:hover{
+    background-color: var(--dark-carnation);
+    color: white;
+}
+
+.carnation .firstBox .friend{
+    min-width: 20%;
+    border-radius: 15px;
+}
+
+.carnation .firstBox input{
+    border: 2px solid var(--primary-carnation);
+    border-radius: 20px;
+    width: 50%;
+    height: 80%;
+    margin-left: 5px;
+    transition: 0.2s ease;
+}
+
+.carnation .firstBox input:focus{
+    outline: none;
+    border: 2px solid rgb(255, 138, 42);
+}
+
+.carnation .main .box{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 99%;
+    background-color: white;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.216);
+}
+
+.carnation .box .post{
+    width: 100%;
+    
+    padding-bottom: 10px;
+}
+.carnation .box .user{
+    margin-top: 5px;
+    color: var(--black-carnation);
+    display: flex;
+    align-content: center;
+    font-weight: bold;
+    
+}
+
+.carnation .user p{
+    transition: .2s ease;
+}
+
+.carnation .box .user p:hover{
+    color: #F4C430;
+    text-decoration: underline;
+
+}
+
+.carnation .user img{
+    height: 50px;
+    border: 0.5px solid var(--black-carnation);
+    margin: 1px;
+    border-radius: 50%;
+    width: 50px;
+    margin-left: 5px;
+}
+
+
+.carnation .user > p{
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.carnation .post .title{
+    margin-left: 5px;
+    margin-top: 3px;
+    color: var(--black-carnation);
+    font-weight: 430;
+}
+
+.carnation .post .tags{
+    color: #F4C430;
+}
+
+.carnation .post .image{
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.carnation .post .image img{
+    width: 100%;
+    height: fit-content;
+    max-width: 500px;
+    max-height: 300px;
+}
+
+
+
+.carnation .postbar{
+    display: flex;
+    height: 30px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.carnation .postbar button{
+    border: none;
+    color: gray;
+    background-color: white;
+    cursor: url('/img/Cursor.png'), auto;
+}
+
+.carnation .postbar button:hover{
+    background-color: #6969690e;
+}
+
+.carnation .postbar .like span{
+    color: gray;
+}
+.carnation .postbar .isLike span{
+    color: var(--dark-carnation);
+}
+
+.carnation .postbar .dislike span{
+    color: gray;
+}
+.carnation .postbar .isDislike span{
+    color: rgb(74, 77, 255);
+    
+}
+
+.carnation .commentbar{
+    background-color: rgba(227, 227, 227, 0.229);
+    display: flex;
+    height: 30px;
+    position: relative;
+}
+
+.carnation .commentbar p{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    color: #69696987;
+    font-weight: 360;
+    text-decoration: underline;
+}
+
+.carnation .comment{
+    padding: 15px;
+        transition: .2s ease;
+    
+}
+
+.carnation .comment:hover{
+    background-color: rgba(227, 227, 227, 0.229);
+    
+}
+
+.carnation .comment .commentName {
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: .2s ease;
+}
+
+.carnation .comment .commentName p{
+    transition: .2s ease;
+
+}
+
+.carnation .comment .commentName p:hover{
+    color: #F4C430;
+    text-decoration: underline;
+
+}
+.carnation .comment .commentReply{
+    margin-left: 5px;
+    color: #091523bb;
+    font-size: 0.85em;
+}
+
+
+.carnation .comment img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.carnation .footer{
+    padding: 100px;
+}

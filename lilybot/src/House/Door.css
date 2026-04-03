@@ -1,0 +1,36 @@
+
+.door{
+    background-color: rgb(255, 238, 235);
+    width: 300px;
+    height: 200px;
+    position: fixed;
+    top: 250px;
+    left: 30vw;
+    border: 20px solid pink;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.door > h1{
+    color: rgb(255, 147, 147);
+    margin: 3px;
+}
+
+.door > h1 ~ p{
+    color: hsl(350, 100%, 83%);
+    margin: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.door > button{
+    position: absolute;
+    border: none;
+    background-color:  rgb(255, 238, 235);
+    color: hsl(350, 100%, 83%);
+    right: 0;
+    top: 0;
+    font-size: large;
+    font-weight: bold;
+}

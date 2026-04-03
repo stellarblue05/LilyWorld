@@ -1,0 +1,167 @@
+[
+    {
+        "id": 1,
+        "pfp": "./img/pfp/p1.png",
+        "user": "Ryan Smith",
+        "title": "My dog",
+        "tags": "#childLabor #ww2 #cute",
+        "image": "./img/post/a1.png",
+        "like": "12k",
+        "dislike": "169",
+        "comment": [
+            {   
+                "replyPic": "./img/pfp/p1.png",
+                "name": "Christofer Josh",
+                "reply": "Love it"
+            },
+            {
+                "replyPic":"./img/pfp/p7.png",
+                "name": "Pablo Morgan",
+                "reply": "very cute honey 🥰🥰🥰"
+            },
+            {
+                "replyPic":"./img/pfp/p1.png",
+                "name": "EnWuxa4hf384",
+                "reply": "EARN FREE $30,000 AT SCAMY.com FOR FREE!!! 🤑🤑"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "pfp": "./img/pfp/p12.png",
+        "user": "C00lRoboxKids67",
+        "title": "Which school subject do yall find useless?",
+        "tags": "#FUCKschool #students",
+        "image":"./img/post/a3.png",
+        "like": "670",
+        "dislike": "126",
+        "comment": [
+            {
+                "replyPic":"./img/pfp/p10.png",
+                "name": "JimmyJimmyJimmyJimny",
+                "reply": "Maht 😢😢😢😢😢😢😢😢😢😢😢😢 "
+            },
+            {
+                "replyPic":"./img/pfp/p6.png",
+                "name": "John Aman",
+                "reply": "Every subject taught in class serves a distinct and meaningful role in a student's overall intellectual and personal development. While their applications may not always be immediately obvious, each discipline contributes essential skills, knowledge, and ways of thinking that are valuable both academically and in real-life situations."
+            },
+            {
+                "replyPic":"./img/pfp/p1.png",
+                "name": "Carl Hammerson",
+                "reply": "dame is 🤣🎉"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "pfp": "./img/pfp/p5.png",
+        "user": "John Dudes",
+        "title": "Rate me 1 - 10",
+        "tags": "#rateMe #boy #man #joe",
+        "image": "./img/post/a2.png",
+        "like": "2k",
+        "dislike": "946",
+        "comment": [
+            {   
+                "replyPic":"./img/pfp/p9.png",
+                "name": "love-Almond",
+                "reply": "8/10 keep it up!"
+            },
+            {
+                "replyPic":"./img/pfp/p2.png",
+                "name": "Fishy Pissy",
+                "reply": "You look like a guy who tell teach 'bout homework 😭🤞 "
+            },
+            {
+                "replyPic":"./img/pfp/p8.png",
+                "name": "Paul587",
+                "reply": "dm me"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "pfp": "./img/pfp/p3.png",
+        "user": "FINews",
+        "title": "Famous Celeberty found walking with his 3 years old girlfriend...",
+        "tags": "#FINews #BreakingNews #Shocking",
+        "image":"",
+        "like": "1.2M",
+        "dislike": "40k",        
+        "comment": [
+            {
+                "replyPic":"./img/pfp/p1.png",
+                "name": "Karen",
+                "reply": "OMG NO WAY!!"
+            },
+            {
+                "replyPic":"./img/pfp/p4.png",
+                "name": "Olive Oli",
+                "reply": "Who TF makes the title 😭"
+            },
+            {
+                "replyPic":"./img/pfp/p1.png",
+                "name": "A Dude3993",
+                "reply": "cool 🤔"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "pfp": "./img/pfp/p20.png",
+        "user": "Hanoka78",
+        "title": "Joe >>>>> World Hunger",
+        "tags": "#Joe #JoeFans #FreeJoe #WorldDomination",
+        "image":"",
+        "like": "569k",
+        "dislike": "238k",        
+        "comment": [
+            {
+                "replyPic":"./img/pfp/p14.png",
+                "name": "Magaret Borealis",
+                "reply": "I'm 100% argee with this fuck world hunger Joe is way better"
+            },
+            {
+                "replyPic":"./img/pfp/p4.png",
+                "name": "FREE_JOE2922",
+                "reply": "FREE JOE FREE JOE FREE JOE FREE JOE FREE JOE FREE JOE"
+            },
+            {
+                "replyPic":"./img/pfp/p1.png",
+                "name": "Kristiana Gooper",
+                "reply": "What is wrong with you guys? Many children and people in need get starve to dead. Can't you all take this ploblem seriosly???"
+            }
+        ]
+    },
+
+    {
+        "id": 6,
+        "pfp": "./img/pfp/p15.png",
+        "user": "Banana Aira",
+        "title": "Have yall watch Paul last day 2 yet?? I need an opinion",
+        "tags": "#paulLastDay #movie #hobby",
+        "image":"./img/post/a4.png",
+        "like": "299",
+        "dislike": "793",        
+        "comment": [
+            {
+                "replyPic":"./img/pfp/p17.png",
+                "name": "Kiriririririir",
+                "reply": "WHOS IDEA ON MAKING 2nd SEASON??? EVERYONE LITTERALLY DIED ON FIRST MOVIE"
+            },
+            {
+                "replyPic":"./img/pfp/p19.png",
+                "name": "Mr.Shit",
+                "reply": "WOW, everyone just going ATSLEEP on the first season???? I'm cryin rn"
+            },
+            {
+                "replyPic":"./img/pfp/p12.png",
+                "name": "C00lRoboxKids67",
+                "reply": "My mom gonna beats me up finding I'm skip school to watch this trashy trahsy movie"
+            }
+        ]
+    }
+
+
+]

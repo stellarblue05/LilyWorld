@@ -1,0 +1,7 @@
+.Iris .calContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(140deg, rgb(128, 129, 132), rgb(186, 176, 188));
+    height: 100%;
+}

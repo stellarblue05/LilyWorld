@@ -1,27 +1,55 @@
 import Draggable from 'react-draggable';
 import {useRef, useState} from 'react'
+import './Lily.css';
 
 function Lily( {onClick} ) {
 
     const nodeRef = useRef(null);
     const [fullscreen, setFullscreen] = useState(false);
 
+
  return(
-<>
-    <Draggable nodeRef={nodeRef} handle=".handle" disabled={fullscreen}>
-            <div ref={nodeRef} className={`flowers ${fullscreen ? "fullscreen" : ""}`}>
+<div className='lily'>  
+    <Draggable nodeRef={nodeRef} handle=".handle" disabled={fullscreen} position={fullscreen ? {x: 0,y: 0} : undefined}>
+            <div ref={nodeRef} className={`flowers${fullscreen ? "fullscreen" : ""}`}>
                 <div className="handle"> 
                     <div>
-                        <p>Lily World</p>
+                        <p>Lily World 2.0</p>
                     </div>
-                    <button className='fullButton' onClick={() => setFullscreen(!fullscreen)}>▢</button>
+                    <button className='fullButton' onClick={() => setFullscreen(!fullscreen)} >▢</button>
                     <button className='Xbutton' onClick={onClick}>X</button>
                 </div>
-                <div className='appbody'></div>
-                <img src="/img/Banana.png"/>
+                <div className='appbody'>
+                    <div className="headerPot">
+                        <h1 className='MyHeader'>Welcome</h1>
+                    </div>
+                    
+                    <p>Welcome to my world bla a bla bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur asperiores explicabo dignissimos nesciunt, in, quo ipsam, quaerat dolore ut illo est laudantium! Aperiam dolorum deserunt soluta sit, qui atque?</p>
+
+                    <div className='mainPot'>
+                         
+                        <div className="centerPot">
+                            <p>Bring me to your desktop!!!</p>
+                            <img src="./img/Cat.png"/>
+                            <button className='downloadBtn'>Download!</button>
+                        </div>
+                        <div className="sidePot">
+                            <p className='chat'>Chat with me!</p>
+                            <p className='tutorial'>Tutorial</p>
+
+                        </div>
+                    </div>
+
+
+                    <div className="footerPot">
+
+                    </div>
+
+                </div>
+                
             </div>
      </Draggable>
-</>
+</div>
  )
 }
 
