@@ -4,13 +4,13 @@
     "style": {
       "background-position": "cover",
       "background-size": "cover",
-      "opacity": 0.1
+      "opacity": 0.05
 
     },
     "styles": [{}, {}, {}],
     // `images` supports online and local images, as well as folders.
     "images": [
-          "C:\\Users\\User\\OneDrive\\Desktop\\School project (do not enter!!!)\\ImportantDocument\\FB-3.png"
+          "C:\\Users\\User\\OneDrive\\Desktop\\School project (do not enter!!!)\\ImportantDocument\\Miz.png"
         
     ],
     "interval": 0,

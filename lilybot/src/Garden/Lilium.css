@@ -15,18 +15,71 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    
 }
 
 
 .lilum .Sprite img{
     width: 64px;
-
+    backface-visibility: hidden;
+    transition: 10ms;
 }
 
-.lilum .Sprite p{
+
+
+
+
+/*OUTPUT & INPUT element use .Xylem instead of .lilum*/
+.Xylem .Output{
  position: absolute;
  bottom: 90px;
  text-shadow: -1.5px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
  color: var(--primary-lily);
+}
+
+
+.Xylem .inputBox{
+    top: -22px;
+    right: -40px;
+    position: absolute;
+    display: flex;
+    animation: float 4s ease-in-out infinite;
+}
+
+.Xylem .submit{
+    background-color: var(--primary-lily);
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-family: nunito, Arial, Helvetica, sans-serif;
+    &:hover{
+        background-color: var(--dark-lily);
+    }
+}
+
+.Xylem input{
+ bottom: 105px;
+ border: 2px solid var(--primary-lily);
+ transition: 0.5s ease-in-out;
+ border-radius: 5px 0px 0px 5px;
+ width: 110px;
  
+ &:focus{
+    border: 2px solid var(--dark-lily);
+    outline: none;
+ }
+
+ &::placeholder{
+    color: rgba(255, 124, 146, 0.54);
+ }
+}
+
+
+@keyframes float {
+    0%{transform: translateY(0px) ;}
+    50%{transform: translateY(-2.5px);}
+    0%{transform: translateY(0px);}
 }
