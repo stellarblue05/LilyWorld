@@ -1,134 +1,148 @@
-.lily{
+.lily {
   --very--dark-lily: hsl(345, 62%, 36%);
   --dark-lily: hsl(345, 79%, 66%);
   --primary-lily: hsl(345, 93%, 77%);
   --light-lily: hsl(345, 100%, 91%);
   --very-light-lily: hsl(344, 100%, 96%);
 
-  font-family: 'Times New Roman', Times, serif;
-  font-family: "Caveat",cursive;
-    
+  font-family: "Times New Roman", Times, serif;
+  font-family: "Caveat", cursive;
 }
-.lily .handle{
-    background-color: var(--primary-lily);
-    align-items: center;
-    position: relative;
-    border-radius: 5px;
-    width: auto;
-}
-
-.lily .handle div p{
-    position: fixed;
-    left: 0px;
-    top: -25px;
-    margin-left: 5px;
-    font-family:"Dancing Script", cursive;
-    font-size: 1.4rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
+.lily .handle {
+  background-color: var(--primary-lily);
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  width: auto;
 }
 
-.lily .handle button{
-    height: 30px;
+.lily .handle div p {
+  position: fixed;
+  left: 0px;
+  top: -25px;
+  margin-left: 5px;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
 }
 
-.lily .handle .Xbutton{
-    background-color: var(--dark-lily);
-    font-weight: bold;
+.lily .handle button {
+  height: 30px;
 }
 
-.lily .handle .fullButton{
-    background-color: var(--light-lily);
-    color: white;
-    font-weight: bold;
+.lily .handle .Xbutton {
+  background-color: var(--dark-lily);
+  font-weight: bold;
 }
 
-.lily .appbody{
-    border-radius: 5px;
-    overflow-y: auto;
-    width: 500px;
-    height: 400px;
-    background: linear-gradient(0deg,var(--very-light-lily) 0%, white 100%);
-    color: var(--very--dark-lily);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.lily .handle .fullButton {
+  background-color: var(--light-lily);
+  color: white;
+  font-weight: bold;
 }
 
-.flowersfullscreen > .appbody{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(240, 240, 240);
+.lily .appbody {
+  border-radius: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 500px;
+  height: 400px;
+  background: linear-gradient(0deg, var(--very-light-lily) 0%, white 100%);
+  color: var(--very--dark-lily);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
-
-
-
-
-
-
-.lily .appbody  .MyHeader{
-    font-family: "Dancing Script", cursive;
-
+.lily .appbody::-webkit-scrollbar {
+  width: 8.68px;
+  z-index: 2;
 }
 
-.lily .appbody > .headerPot{
-    border: 2px dotted var(--dark-lily);
-    padding-left: 30%;
-    padding-right: 30%;
-    margin-top: 2px;
-    background-color: rgba(255, 255, 255, 0.645);
-
+.lily .appbody::-webkit-scrollbar-thumb {
+  background: rgb(249, 170, 183);
+  border-radius: 4.5px;
 }
 
-.lily .appbody .mainPot{
-    display: flex;
-    justify-content: start;
-    flex-direction: row-reverse;
-    width: 100%;
-    background-color: red;
-    
+.lily .appbody::-webkit-scrollbar-thumb:hover {
+  background: #d48b8b7e;
 }
 
-
-.lily .centerPot{
-    background-color: var(--light-lily);
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.lily .appbody::-webkit-resizer {
+  display: none;
 }
 
-.lily .centerPot img{
-    width: 50%;
+.flowersfullscreen > .appbody {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
 }
 
-.lily .centerPot button{
-   width: 60%;
-   height: 40px;
-    background-color: var(--dark-lily);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.lily .appbody .MyHeader {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 3.29rem;
+  margin: 0;
+  max-width: 99%;
+  background: linear-gradient(145deg, var(--light-lily), var(--dark-lily));
+  background-clip: text;
+  color: transparent;
 }
 
-
-
-
-.lily .appbody .mainPot .sidePot{
-    background-color: white;
-    width: 30%;
+.lily .appbody > .headerPot {
+  border: 2px dotted var(--dark-lily);
+  padding-left: 30%;
+  padding-right: 30%;
+  margin-top: 2px;
+  background-color: rgba(255, 255, 255, 0.645);
 }
 
-.lily .appbody .mainPot .sidePot p{
-    text-decoration: underline;
-    margin-left: 3px;
-    cursor: pointer;
+.lily .appbody .mainPot {
+  display: flex;
+  justify-content: start;
+  flex-direction: row-reverse;
+  width: 100%;
+  background-color: red;
 }
 
-.lily .appbody .mainPot .sidePot p:hover{
-    color: var(--dark-lily);
+.lily .centerPot {
+  background-color: var(--light-lily);
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.lily .centerPot img {
+  width: 50%;
+}
+
+.lily .centerPot button {
+  width: 60%;
+  height: 40px;
+  background-color: var(--dark-lily);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lily .centerPot #OK {
+  background-color: gfalse;
+}
+
+.lily .appbody .mainPot .sidePot {
+  background-color: white;
+  width: 30%;
+}
+
+.lily .appbody .mainPot .sidePot p {
+    font-size: 1.4em;
+  text-decoration: underline;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.lily .appbody .mainPot .sidePot p:hover {
+  color: var(--dark-lily);
+}

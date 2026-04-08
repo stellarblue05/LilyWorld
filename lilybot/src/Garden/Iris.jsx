@@ -25,10 +25,10 @@ function Iris ( {onClick} ) {
                             <div className="calculator">
                                 <form action="">
                                     <div>
-                                        <input type='text' placeholder='21'/>
+                                        <input type='text' readOnly/>
                                     </div>
                                     <div>
-                                        <p>9 + 10?</p>
+                                        
                                     </div>
                                 </form>
                             </div>

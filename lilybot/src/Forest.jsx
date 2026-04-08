@@ -6,6 +6,8 @@ import Tulip from './Garden/Tulip.jsx';
 import Peony from './Garden/Peony.jsx';
 import Carnation from './Garden/Carnation.jsx';
 import Iris from './Garden/Iris.jsx';
+import Lilium from './Garden/Lilium.jsx'
+
 
 import Clock from './House/Clock.jsx';
 import Door  from './House/Door.jsx';
@@ -19,6 +21,7 @@ function Forest() {
   const [isIris , setIsIris] = useState(false);
   const [isCarnation, setIsCarnation] = useState(false);
   const [isPeony, setIsPeony] = useState(false);
+  const [isAwake, setIsAwake] = useState(false);
 
   const powerHarvest = () => {
     setPower(!power)
@@ -43,6 +46,8 @@ function Forest() {
   function carnationHarvest() {
     setIsCarnation(!isCarnation)
   }
+
+
 
 
   return (
@@ -86,13 +91,13 @@ function Forest() {
       </div>
 
       {/*App pop ups*/}
-      {isBloom && <Lily onClick={lilyHarvest}/>}
+      {isBloom && <Lily onClick={lilyHarvest} onAwake={() => setIsAwake(true)} isAwake={isAwake}/>}
       {power && <Door onClick={powerHarvest}/>}
       {isTulip && <Tulip onClick={tulipHarvest}/> }
       {isCarnation && <Carnation onClick={carnationHarvest}/>}
       {isIris && <Iris onClick={irisHarvest}/>}
       {isPeony && <Peony onClick={peonyHarvest}/>}
-
+      {isAwake && <Lilium/>}
 
     </>
   )

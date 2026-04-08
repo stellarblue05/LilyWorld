@@ -1,0 +1,23 @@
+.lilum {
+    width: 100vw;
+    height: fit-content;
+}
+
+
+.lilum .Sprite{
+    position: relative;
+    z-index: 20;
+    display: block;
+
+    width: 100%;
+    min-width: 300px;
+    height: 500px;
+
+}
+
+
+.lilum .Sprite img{
+    position: absolute;
+    z-index: 21;
+    image-rendering: pixelated;
+}

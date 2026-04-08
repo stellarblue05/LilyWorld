@@ -1,8 +1,9 @@
 import Draggable from 'react-draggable';
 import {useRef, useState} from 'react'
+
 import './Lily.css';
 
-function Lily( {onClick} ) {
+function Lily( {onClick ,onAwake ,isAwake} ) {
 
     const nodeRef = useRef(null);
     const [fullscreen, setFullscreen] = useState(false);
@@ -20,6 +21,7 @@ function Lily( {onClick} ) {
                     <button className='Xbutton' onClick={onClick}>X</button>
                 </div>
                 <div className='appbody'>
+                 <div className="home">
                     <div className="headerPot">
                         <h1 className='MyHeader'>Welcome</h1>
                     </div>
@@ -31,7 +33,7 @@ function Lily( {onClick} ) {
                         <div className="centerPot">
                             <p>Bring me to your desktop!!!</p>
                             <img src="./img/Cat.png"/>
-                            <button className='downloadBtn'>Download!</button>
+                            <button className='downloadBtn' id={isAwake ? "OK" : ""}onClick={onAwake}>{isAwake ? "Complete!" : "Download"}</button>
                         </div>
                         <div className="sidePot">
                             <p className='chat'>Chat with me!</p>
@@ -42,8 +44,10 @@ function Lily( {onClick} ) {
 
 
                     <div className="footerPot">
-
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel debitis tempore, a quas consequatur, eveniet repellendus corporis impedit in eum tenetur distinctio ab corrupti ipsam perferendis asperiores repellat, dicta ratione.</p>
                     </div>
+                 </div>
+
 
                 </div>
                 
