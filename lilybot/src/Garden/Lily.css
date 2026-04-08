@@ -1,9 +1,5 @@
 .lily {
-  --very--dark-lily: hsl(345, 62%, 36%);
-  --dark-lily: hsl(345, 79%, 66%);
-  --primary-lily: hsl(345, 93%, 77%);
-  --light-lily: hsl(345, 100%, 91%);
-  --very-light-lily: hsl(344, 100%, 96%);
+
 
   font-family: "Times New Roman", Times, serif;
   font-family: "Caveat", cursive;

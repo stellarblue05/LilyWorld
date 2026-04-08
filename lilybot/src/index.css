@@ -5,6 +5,14 @@ Caveat - handwriting
 Dansing-Script - something that gose burrrrrrrrrrrrrrrrrrr
 */
 
+:root{
+  --very--dark-lily: hsl(345, 62%, 36%);
+  --dark-lily: hsl(345, 79%, 66%);
+  --primary-lily: hsl(345, 93%, 77%);
+  --light-lily: hsl(345, 100%, 91%);
+  --very-light-lily: hsl(344, 100%, 96%);
+}
+
 body {
   background-image: url(img/Bliss.png);
   background-position: center;

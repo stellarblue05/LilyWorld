@@ -1,23 +1,32 @@
-.lilum {
-    width: 100vw;
-    height: fit-content;
+.lilum{
+    position: relative;
+    z-index: 20;
+    display: block;
+    width: 100%;
+    min-width: 300px;
+    height: 500px;
 }
 
 
 .lilum .Sprite{
-    position: relative;
-    z-index: 20;
-    display: block;
-
-    width: 100%;
-    min-width: 300px;
-    height: 500px;
-
+    position: absolute;
+    z-index: 21;
+    image-rendering: pixelated;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .lilum .Sprite img{
-    position: absolute;
-    z-index: 21;
-    image-rendering: pixelated;
+    width: 64px;
+
+}
+
+.lilum .Sprite p{
+ position: absolute;
+ bottom: 90px;
+ text-shadow: -1.5px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
+ color: var(--primary-lily);
+ 
 }
