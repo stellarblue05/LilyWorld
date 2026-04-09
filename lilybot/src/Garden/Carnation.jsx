@@ -73,7 +73,7 @@ function Carnation({ onClick }) {
                         </div>
 
                         {carrot.image && (
-                          <div className="image">
+                          <div className="image"> 
                             <img src={carrot.image}/>
                           </div>
                         )}

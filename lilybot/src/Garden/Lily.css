@@ -3,12 +3,13 @@
 
   font-family: "Times New Roman", Times, serif;
   font-family: "Caveat", cursive;
+
 }
 .lily .handle {
   background-color: var(--primary-lily);
   align-items: center;
   position: relative;
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
   width: auto;
 }
 
@@ -17,6 +18,7 @@
   left: 0px;
   top: -25px;
   margin-left: 5px;
+  font-family: 'Times New Roman', Times, serif;
   font-family: "Dancing Script", cursive;
   font-size: 1.4rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.37);
@@ -38,7 +40,7 @@
 }
 
 .lily .appbody {
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
   overflow-y: auto;
   overflow-x: hidden;
   width: 500px;
@@ -48,25 +50,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &::-webkit-scrollbar{
+      width: 8.68px;
+      z-index: 2;
+  }
+  &::-webkit-scrollbar-thumb{
+      background: rgb(249, 170, 183);
+      border-radius: 4.5px;
+  }
+  &::-webkit-scrollbar-track{
+      border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    background: #d48b8b7e;
+  }
+  &::-webkit-resizer{
+      background-color: var(--very-light-lily);
+  }
+
 }
 
-.lily .appbody::-webkit-scrollbar {
-  width: 8.68px;
-  z-index: 2;
-}
-
-.lily .appbody::-webkit-scrollbar-thumb {
-  background: rgb(249, 170, 183);
-  border-radius: 4.5px;
-}
-
-.lily .appbody::-webkit-scrollbar-thumb:hover {
-  background: #d48b8b7e;
-}
-
-.lily .appbody::-webkit-resizer {
-  display: none;
-}
 
 .flowersfullscreen > .appbody {
   height: 100%;
@@ -79,10 +82,14 @@
   font-weight: bold;
   font-size: 3.29rem;
   margin: 0;
+  margin-left: 25%;
+  margin-right: 25px;
   max-width: 99%;
   background: linear-gradient(145deg, var(--light-lily), var(--dark-lily));
-  background-clip: text;
-  color: transparent;
+   -webkit-background-clip: text; 
+  background-clip: text;   
+  color: transparent;  
+  
 }
 
 .lily .appbody > .headerPot {
@@ -98,7 +105,6 @@
   justify-content: start;
   flex-direction: row-reverse;
   width: 100%;
-  background-color: red;
 }
 
 .lily .centerPot {

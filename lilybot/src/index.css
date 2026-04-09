@@ -82,7 +82,8 @@ body {
 /*Trak bar*/
 
 .taskBar {
-  background-color: rgb(232, 232, 232);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(201, 201, 201, 0.5));
+  border: 2px solid rgba(255, 255, 255, 0.353);
   position: fixed;
   left: 0;
   bottom: 0;
@@ -91,13 +92,14 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 30px;
-  z-index: 184;
+  z-index: 18;
   overflow: hidden;
   user-select: none;
 }
 
 .taskBar > button {
   height: 30px;
+  z-index: 99;
 }
 
 .taskBar .power {
@@ -114,6 +116,13 @@ body {
 .taskBar .time {
   color: rgb(23, 23, 23);
   margin-right: 5px;
+  font-weight: bold;
+  color: white;
+  font-family: monospace;
+  font-size: 17px;
+  &:hover{
+    background: rgba(0, 0, 0, 0.047)
+  }
 }
 
 .material-symbols-outlined {

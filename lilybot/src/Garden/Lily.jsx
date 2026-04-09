@@ -26,7 +26,7 @@ function Lily( {onClick ,onAwake ,isAwake} ) {
                         <h1 className='MyHeader'>Welcome</h1>
                     </div>
                     
-                    <p>Welcome to my world bla a bla bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda consectetur asperiores explicabo dignissimos nesciunt, in, quo ipsam, quaerat dolore ut illo est laudantium! Aperiam dolorum deserunt soluta sit, qui atque?</p>
+                    <p>WELCOME to my website! my name is Abnormes Illusory or you can call me "Lily" ig   </p>
 
                     <div className='mainPot'>
                          
