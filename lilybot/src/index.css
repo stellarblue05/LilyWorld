@@ -14,11 +14,6 @@ Dansing-Script - something that gose burrrrrrrrrrrrrrrrrrr
 }
 
 body {
-  background-image: url(img/Bliss.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   margin: 0;
   display: flex;
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -28,6 +23,19 @@ body {
 
 /*Flowers*/
 /**/
+.background{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  z-index: -9999;
+  user-select: none;
+}
+
+.bg{
+  width: 100%;
+}
+
 
 .appPot {
   display: flex;

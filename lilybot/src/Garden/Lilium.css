@@ -21,7 +21,7 @@
 
 
 .lilum .lily{
-    width: 64px;
+    
     backface-visibility: hidden;
     transition: 10ms;
 }
@@ -36,7 +36,7 @@
     animation: Walk 1s steps(3) infinite;
     
 }
-
+  
 .lilum #R{
     background-image: url(img/Lily/WalkR.png);
 }

@@ -5,7 +5,7 @@ import "./Lilium.css";
 const Lilium = () => {
   const [out, setOut] = useState(false);
   const [input, setInput] = useState(false);
-
+  const [word, setWord] = useState("Hello!");
   //1 = right -1 = left 0 = stop
   const [direction, setDirection] = useState(1);
 
@@ -15,6 +15,8 @@ const Lilium = () => {
   const lilyRef = useRef(null);
   const directionRef = useRef(1);
   const timeRef = useRef(2000);
+  const lilyImg = useRef(null);
+  const tapCount = useRef(0);
 
   //Animation loop
   function animateX() {
@@ -72,6 +74,8 @@ const Lilium = () => {
       speedRef.current = 0;
       console.log("stop");
   };
+
+
   const Walk = () => {
     //0 = Idle, 1 = Right , 2 = Left
     const behavior =Math.floor(Math.random() * 3);
@@ -95,11 +99,57 @@ const Lilium = () => {
     timeRef.current = setTimeout(Walk, duration);
   }
 
+
   const talk =() => {
     stop();
     setInput(true);
   }
 
+  function Submit(){
+        setInput(false);
+        setOut(true);
+  }
+
+
+  const tap = () => {
+    setOut(false);
+    
+    if(input === true){
+          console.log('tap');
+          tapCount.current += 1
+          console.log(tapCount.current);
+    }
+
+    switch (tapCount.current) {
+      case 5:
+        setWord("SYOPPP!");
+        Submit();
+        tapCount.current = 6;
+        break;
+      case 10:
+        setWord("I SAID STOP!!!")
+        Submit();
+        tapCount.current = 11
+        break;
+      case 15:
+        setWord("AAAAAAAAAAAA")
+        Submit();
+        tapCount.current = 16
+        break;
+      case 20:
+        setWord("Pls stop")
+        Submit();
+        tapCount.current = 21
+        break;
+      case -1:
+        setWord("HOW???????")
+        Submit();
+        break
+      default:   
+    }
+  }
+
+  
   //Random speed and direction swap every loop
   useEffect(() => {
     start();
@@ -116,8 +166,8 @@ const Lilium = () => {
         ref={lilyRef}
         onClick={input || out ? undefined : talk}
       >
-        <Xylem input={input} setInput={setInput} out={out} setOut={setOut} start={start} stop={stop} talk={talk}/>
-        <div className="lily" onClick={input || out ? start : undefined}>
+        <Xylem input={input} setInput={setInput} out={out} setOut={setOut} start={start} stop={stop} talk={talk} word={word} setWord={setWord} Submit={Submit}/>
+        <div className="lily" onClick={ out ? start : tap} ref={lilyImg}>
           {direction > 0 ? <div className="Walk" id="R"></div> : ""}
           {direction < 0 ? <div className="Walk" id="L"></div> : ""}
           {direction === 0 ? <div className="Stand"></div> : ""}

@@ -12,10 +12,12 @@ function Carnation({ onClick }) {
 
   function like() {
     setIsLike(!isLike);
+    if(dislike) setIsDislike(false)
   }
 
   function dislike() {
     setIsDislike(!isDislike);
+    if(like) setIsLike(false)
   }
 
  return(

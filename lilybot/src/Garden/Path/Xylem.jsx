@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 //THis one is for input on lily :)
-const Xylem = ({input ,setInput, out, setOut, start, stop, talk}) => {
+const Xylem = ({input ,setInput, out, setOut, start, stop, talk, word, setWord, Submit}) => {
 
-    const [word, setWord] = useState("Hello!");
-    function Submit(){
-        setInput(false);
-        setOut(true);
-    }
 
     function Output(){
         setWord("Hello!");
@@ -28,6 +23,7 @@ const Xylem = ({input ,setInput, out, setOut, start, stop, talk}) => {
                   <button onClick={Output}className="submit">:)</button>
                  </div>
                  <div className="action">
+                    <button className='move' onClick={start}>Move</button>
                     <button className="eat" onClick={Eat}>Eat</button>
                  </div>
             </div>

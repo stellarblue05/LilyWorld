@@ -1,6 +1,6 @@
 //Forest -> App -> main
 
-import { useState } from 'react';
+import { useState , useRef} from 'react';
 import Lily from './Garden/Lily.jsx'
 import Tulip from './Garden/Tulip.jsx';
 import Peony from './Garden/Peony.jsx';
@@ -22,6 +22,7 @@ function Forest() {
   const [isCarnation, setIsCarnation] = useState(false);
   const [isPeony, setIsPeony] = useState(false);
   const [isAwake, setIsAwake] = useState(false);
+  const [bg, setBg] = useState(1);
 
   const powerHarvest = () => {
     setPower(!power)
@@ -49,10 +50,18 @@ function Forest() {
 
 
 
-
   return (
     <>
-   
+      <div className="background">
+        {bg === 1 ? <img src="img/Bg/Bliss.png" className='bg' id='bg1'/> : ""}
+        {bg === 2 ? <img src="img/Bg/CityNight.png" className='bg' id='bg2'/> : ""}
+        {bg === 3 ? <img src="img/Bg/Green.png" className='bg' id='bg3'/> : ""}
+        {bg === 4 ? <img src="img/Bg/Cat2.png" className='bg' id='bg4'/> : ""}
+        {bg === 5 ? <img src="img/Bg/E.png" className='bg' id='bg5'/> : ""}
+        {bg === 6 ? <img src="img/Bg/Cafe.png" className='bg' id='bg6'/> : ""}
+      </div>
+
+
       <div className="appPot">
         <div className="app-lily">
           <button className="desktop-lily" onClick={lilyHarvest}><img src="/img/Lily.png" /></button>
@@ -96,7 +105,7 @@ function Forest() {
       {isTulip && <Tulip onClick={tulipHarvest}/> }
       {isCarnation && <Carnation onClick={carnationHarvest}/>}
       {isIris && <Iris onClick={irisHarvest}/>}
-      {isPeony && <Peony onClick={peonyHarvest}/>}
+      {isPeony && <Peony onClick={peonyHarvest} bg={bg} setBg={setBg}/>}
       {isAwake && <Lilium/>}
 
     </>
