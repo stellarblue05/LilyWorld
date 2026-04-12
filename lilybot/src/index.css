@@ -93,6 +93,7 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(201, 201, 201, 0.5));
   border: 2px solid rgba(255, 255, 255, 0.353);
   position: fixed;
+  backdrop-filter: blur(1.5px);
   left: 0;
   bottom: 0;
   width: 100%;
@@ -177,7 +178,7 @@ body {
   color: white;
   border: none;
   width: 40px;
-  right: 0;
+  right: 0;   
 }
 
 .handle > .fullButton {
@@ -194,11 +195,13 @@ body {
   min-width: 200px;
   min-height: 300px;
   transition: 1ms ease;
+  box-shadow: 2px 0px 50px 3px rgba(0, 0, 0, 0.29);
 }
 
 .appbody::-webkit-resizer {
   display: none;
 }
+
 
 /*Apps full screen bar*/
 

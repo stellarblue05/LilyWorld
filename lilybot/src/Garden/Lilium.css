@@ -1,6 +1,6 @@
 .lilum{
     position: relative;
-    z-index: 20;
+    z-index: 10;
     display: block;
     width: 100%;
     min-width: 300px;
@@ -79,6 +79,10 @@
  top: -17px;
  text-shadow: -1.5px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
  color: var(--primary-lily);
+ &::selection{
+    color: white;
+    background-color: var(--primary-lily);
+ }
 }
 
 .Xylem .Output{

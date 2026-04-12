@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 //THis one is for input on lily :)
 const Xylem = ({input ,setInput, out, setOut, start, stop, talk, word, setWord, Submit}) => {
-
+const wait = (ms) => new Promise(reslove => setTimeout(reslove, ms));
 
     function Output(){
         setWord("Hello!");
@@ -13,7 +13,9 @@ const Xylem = ({input ,setInput, out, setOut, start, stop, talk, word, setWord, 
         setWord("Nom nom :p");
     }
 
-    
+
+
+
     return (
         <div className='Xylem'>
         {input ? 
@@ -29,7 +31,8 @@ const Xylem = ({input ,setInput, out, setOut, start, stop, talk, word, setWord, 
             </div>
         : ""}
 
-        <div className="OutputBox"> {out ? <p className='Output'>{word}</p> : ""} </div>
+        <div className="pick"></div>
+        <div className="OutputBox"> {out ? <p key={word} className='Output'>{word}</p> : ""} </div>
         
         </div>
     );

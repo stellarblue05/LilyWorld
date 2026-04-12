@@ -1,37 +1,57 @@
-.Peony .appbody{
-    color: rgb(33, 33, 33);
-    font-family: Helvetica, sans-serif;
-    overflow-y: auto;
+.Peony .appbody {
+  color: rgb(33, 33, 33);
+  font-family: Helvetica, sans-serif;
+  overflow-y: auto;
 }
 
-.Peony .main{
-    margin-left: 10px;
-    margin-right: 10px;
+.Peony .main {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.Peony .appbody > h1{
-    margin: 10px 0px 0px 10px;
+.Peony .appbody > h1 {
+  margin: 10px 0px 0px 10px;
 }
 
-
-.Peony .appbody .bgImg{
-    display: flex;
+.Peony .appbody .bgImg {
+  display: flex;
 }
 
-.Peony .appbody .bgImg button{
-    border: 2px solid rgba(132, 123, 151, 0.458);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .2s;
-    color: rgb(94, 94, 94);
-    font-weight: 600;
-    margin-right: 5px;
+.Peony .appbody button {
+  border: 2px solid #d1d5db;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+  color: rgb(49, 49, 49);
+  font-weight: 600;
+  margin-right: 5px;
 
-    &:hover{
-        background-color: rgb(157, 86, 255);
-        color: aliceblue;
-    }
-    &:focus{
-        border: 2px solid rgb(81, 255, 104);
-    }
+  &:hover {
+    background-color: rgb(187, 139, 255);
+    color: aliceblue;
+  }
+}
+
+.Peony .LilyFix {
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+
+}
+.Peony .LilyFix h5{
+  font-weight: 500;
+} 
+
+.Peony .OutputDuration {
+  display: flex;
+
+}
+
+.Peony .OutputDuration input{
+    margin-right: 15px;
+}
+
+.Peony .OutputDuration div {
+    margin-right: 50px;
+    width: 200px;
 }

@@ -24,6 +24,10 @@ function Forest() {
   const [isAwake, setIsAwake] = useState(false);
   const [bg, setBg] = useState(1);
 
+
+  //Pass props betweeen siblings
+  const [T, setT] = useState(3000); //Lily talk time
+
   const powerHarvest = () => {
     setPower(!power)
   }
@@ -65,7 +69,7 @@ function Forest() {
       <div className="appPot">
         <div className="app-lily">
           <button className="desktop-lily" onClick={lilyHarvest}><img src="/img/Lily.png" /></button>
-          <p> NotSpyware </p>
+          <p> Lily World </p>
         </div>
 
         <div className="app-Iris">
@@ -105,8 +109,8 @@ function Forest() {
       {isTulip && <Tulip onClick={tulipHarvest}/> }
       {isCarnation && <Carnation onClick={carnationHarvest}/>}
       {isIris && <Iris onClick={irisHarvest}/>}
-      {isPeony && <Peony onClick={peonyHarvest} bg={bg} setBg={setBg}/>}
-      {isAwake && <Lilium/>}
+      {isPeony && <Peony onClick={peonyHarvest} bg={bg} setBg={setBg} setT={setT} T={T}/>}
+      {isAwake &&  <Lilium isCarnation={isCarnation} T={T}/>}
 
     </>
   )

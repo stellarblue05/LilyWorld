@@ -152,24 +152,31 @@
   border: 2px solid rgb(255, 138, 42);
 }
 
-.carnation .main .box {
+.carnation .MainBox{
+   position: absolute;
+   height: 60%;
+}
+
+
+.box {
   display: flex;
   flex-direction: column;
+  margin-left: 2.5px;
   max-width: 500px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
   width: 99%;
   background-color: white;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.216);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.216);
 }
 
-.carnation .box .post {
+.box .post {
   width: 100%;
 
   padding-bottom: 10px;
 }
-.carnation .box .user {
+.box .user {
   margin-top: 5px;
   color: var(--black-carnation);
   display: flex;
@@ -177,16 +184,16 @@
   font-weight: bold;
 }
 
-.carnation .user p {
+.user p {
   transition: 0.2s ease;
 }
 
-.carnation .box .user p:hover {
+.box .user p:hover {
   color: #f4c430;
   text-decoration: underline;
 }
 
-.carnation .user img {
+ .user img {
   height: 50px;
   border: 0.5px solid var(--black-carnation);
   margin: 1px;
@@ -195,75 +202,75 @@
   margin-left: 5px;
 }
 
-.carnation .user > p {
+.user > p {
   font-size: 1rem;
   margin-left: 5px;
 }
 
-.carnation .post .title {
+.post .title {
   margin-left: 5px;
   margin-top: 3px;
   color: var(--black-carnation);
   font-weight: 430;
 }
 
-.carnation .post .tags {
+ .post .tags {
   color: #f4c430;
 }
 
-.carnation .post .image {
+ .post .image {
   display: flex;
   max-width: 100%;
   overflow: hidden;
 }
 
-.carnation .post .image img {
+ .post .image img {
   width: 100%;
   height: fit-content;
   max-width: 500px;
   max-height: 300px;
 }
 
-.carnation .postbar {
+ .postbar {
   display: flex;
   height: 30px;
   margin-bottom: 5px;
   padding-left: 10px;
 }
 
-.carnation .postbar button {
+.postbar button {
   border: none;
   color: gray;
   background-color: white;
   cursor: url("/img/Cursor.png"), auto;
 }
 
-.carnation .postbar button:hover {
+.postbar button:hover {
   background-color: #6969690e;
 }
 
-.carnation .postbar .like span {
+ .postbar .like span {
   color: gray;
 }
-.carnation .postbar .isLike span {
+.postbar .isLike span {
   color: var(--dark-carnation);
 }
 
-.carnation .postbar .dislike span {
+.postbar .dislike span {
   color: gray;
 }
-.carnation .postbar .isDislike span {
+.postbar .isDislike span {
   color: rgb(74, 77, 255);
 }
 
-.carnation .commentbar {
+.commentbar {
   background-color: rgba(227, 227, 227, 0.229);
   display: flex;
   height: 30px;
   position: relative;
 }
 
-.carnation .commentbar p {
+.commentbar p {
   position: absolute;
   top: -10px;
   left: 10px;
@@ -272,16 +279,16 @@
   text-decoration: underline;
 }
 
-.carnation .comment {
+.comment {
   padding: 15px;
   transition: 0.2s ease;
 }
 
-.carnation .comment:hover {
+.comment:hover {
   background-color: rgba(227, 227, 227, 0.229);
 }
 
-.carnation .comment .commentName {
+.comment .commentName {
   font-size: 1em;
   font-weight: 500;
   display: flex;
@@ -289,27 +296,27 @@
   transition: 0.2s ease;
 }
 
-.carnation .comment .commentName p {
+.comment .commentName p {
   transition: 0.2s ease;
 }
 
-.carnation .comment .commentName p:hover {
+.comment .commentName p:hover {
   color: #f4c430;
   text-decoration: underline;
 }
-.carnation .comment .commentReply {
+.comment .commentReply {
   margin-left: 5px;
   color: #091523bb;
   font-size: 0.85em;
 }
 
-.carnation .comment img {
+.comment img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 5px;
 }
 
-.carnation .footer {
+.carnation.footer {
   padding: 100px;
 }

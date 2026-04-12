@@ -1,7 +1,7 @@
 import Draggable from "react-draggable";
 import { useRef, useState } from "react";
 import './Peony.css'
-function Peony({ onClick, bg, setBg }) {
+function Peony({ onClick, bg, setBg , T, setT}) {
   const nodeRef = useRef(null);
   const [fullscreen, setFullscreen] = useState(false);
 
@@ -45,6 +45,17 @@ function Peony({ onClick, bg, setBg }) {
                 <button onClick={() => setBg(6)}>Cafe</button>
               </div>
               <hr/>
+              
+              <div className="LilyFix">
+                <h3>Lily</h3>
+                <h5> Output Duration</h5>
+                <div className="OutputDuration">
+                  <input type="range" min="500" max="20000" step="100" value={T} onChange={(e) => setT(Number(e.target.value))}/>
+                  <div><p>{T/1000} Seconds</p></div>
+                  <button onClick={() => {setT(3000)}}>Default</button>
+                </div>
+              </div>
+              <hr/>
               <h3>Help</h3>
               <div className="help">
                     <p>Q: How do I resize the pop-ups?</p>
@@ -60,6 +71,9 @@ function Peony({ onClick, bg, setBg }) {
                    <br/>
                    <p>Q: How do I get in/out fullscreen?</p>
                    <p>A: F11</p>
+                   <br/>
+                   <p>Q: Why is lily froze?</p>
+                   <p>A: Try Clicking on her</p>
                    <br/>
                    <p>Q: Who am I?</p>
                    <p>A: You are the peoson who asked me question</p>

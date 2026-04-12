@@ -33,7 +33,7 @@ function Lily( {onClick ,onAwake ,isAwake} ) {
                         <div className="centerPot">
                             <p>Bring me to your desktop!!!</p>
                             <img src="./img/Cat.png"/>
-                            <button className='downloadBtn' id={isAwake ? "OK" : ""}onClick={onAwake}>{isAwake ? "Complete!" : "Download"}</button>
+                            <button className='downloadBtn' id={isAwake ? "OK" : ""} onClick={onAwake} >{isAwake ? "Complete!" : "Download"}</button>
                         </div>
                         <div className="sidePot">
                             <p className='chat'>Chat with me!</p>
