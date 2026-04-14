@@ -7,7 +7,7 @@ function Lily( {onClick ,onAwake ,isAwake} ) {
 
     const nodeRef = useRef(null);
     const [fullscreen, setFullscreen] = useState(false);
-
+    const [page, setPage] = useState("home")
 
  return(
 <div className='lily'>  
@@ -26,7 +26,7 @@ function Lily( {onClick ,onAwake ,isAwake} ) {
                         <h1 className='MyHeader'>Welcome</h1>
                     </div>
                     
-                    <p>WELCOME to my website! my name is Abnormes Illusory or you can call me "Lily" ig   </p>
+                    <p>WELCOME to my website! my name is Lilum Illusory or you can call me "Lily" ig   </p>
 
                     <div className='mainPot'>
                          
@@ -38,7 +38,6 @@ function Lily( {onClick ,onAwake ,isAwake} ) {
                         <div className="sidePot">
                             <p className='chat'>Chat with me!</p>
                             <p className='tutorial'>Tutorial</p>
-
                         </div>
                     </div>
 
@@ -56,5 +55,6 @@ function Lily( {onClick ,onAwake ,isAwake} ) {
 </div>
  )
 }
+
 
 export default Lily

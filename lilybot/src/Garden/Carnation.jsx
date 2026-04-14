@@ -1,14 +1,15 @@
 import Draggable from "react-draggable";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 import Carrot from "./Carrot.json";
-import './Carnation.css'
+import "./Carnation.css";
 import Stamen from "./Parts/Stamen";
 
 function Carnation({ onClick }) {
-
   const nodeRef = useRef(null);
   const [fullscreen, setFullscreen] = useState(false);
-;
+  const shuffled = useMemo(() => {
+    return [...Carrot].sort(() => Math.random() - 0.5);
+  }, [Carrot]);
 
   return (
     <div className="carnation">
@@ -40,7 +41,7 @@ function Carnation({ onClick }) {
           <div className="appbody">
             <div className="header">
               <h1>CommonNet</h1>
-              <p>A place for everyone to have fun!!</p>
+              <p>User note: likes post that is human?, dislike bot</p>
             </div>
 
             <div className="main">
@@ -50,15 +51,22 @@ function Carnation({ onClick }) {
                 <button>Profile</button> <button>Manage</button>
               </div>
               <div className="mainBox">
-                
                 {Carrot &&
-                Carrot.map((carrot) => {
-                return <Stamen key={carrot.id} carrot={carrot} />;
-              })}
+                  shuffled.map((carrot) => {
+                    return <Stamen key={carrot.id} carrot={carrot} />;
+                  })}
               </div>
-
             </div>
-            <div className="footer"></div>
+            <div className="footer">
+              <p>How many post do you think is ai?</p>
+              <div className="button">
+                <button>40%</button>
+                <button>60%</button>
+                <button>90%</button>
+                <button>100%</button>
+                <button>FREE JOE</button>
+              </div>
+            </div>
           </div>
         </div>
       </Draggable>

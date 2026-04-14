@@ -231,11 +231,12 @@
   max-height: 300px;
 }
 
- .postbar {
+.postbar {
   display: flex;
   height: 30px;
   margin-bottom: 5px;
   padding-left: 10px;
+  justify-content: space-between;
 }
 
 .postbar button {
@@ -253,7 +254,7 @@
   color: gray;
 }
 .postbar .isLike span {
-  color: var(--dark-carnation);
+  color: rgb(255, 180, 19);
 }
 
 .postbar .dislike span {
@@ -261,6 +262,16 @@
 }
 .postbar .isDislike span {
   color: rgb(74, 77, 255);
+}
+
+.postbar .view{
+  color: rgba(95, 95, 95, 0.666);
+  font-size: 13px;
+  margin-right: 15px;
+  font-weight: 500;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 .commentbar {
@@ -317,6 +328,32 @@
   margin-right: 5px;
 }
 
-.carnation.footer {
+.carnation .footer {
   padding: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.carnation .footer p{
+  font-weight: 200;
+}
+
+.carnation .footer button{
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    transition: .1s ease-in-out;
+
+    background-color: white;
+    border: none;
+    &:hover{
+      background-color: rgba(89, 63, 255, 0.662);
+      color: white;
+    }
+    &:focus{
+      background-color: rgb(89, 63, 255);
+      color: white;
+    }
 }

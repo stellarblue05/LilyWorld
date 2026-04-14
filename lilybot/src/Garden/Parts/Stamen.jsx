@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import '../Carnation.css';
-
+import "../Carnation.css";
 
 const Stamen = ({ carrot }) => {
   const [isLike, setIsLike] = useState(false);
@@ -9,13 +8,14 @@ const Stamen = ({ carrot }) => {
   function like() {
     setIsLike(!isLike);
 
-    if (!isLike) setIsDislike(false); 
+    if (!isLike) setIsDislike(false);
   }
 
   function dislike() {
     setIsDislike(!isDislike);
     if (!isDislike) setIsLike(false);
   }
+  const onImageError = () => imgRef.current.src="./img/pfp/p1.png";
 
   return (
     <div className="box">
@@ -38,21 +38,27 @@ const Stamen = ({ carrot }) => {
       </div>
 
       <div className="postbar">
-        <button 
-          className={isLike ? "isLike" : "like"} 
-          onClick={like}
-        >
-          <span className="material-symbols-outlined">sentiment_satisfied</span>
-          {" "}{carrot.like}
-        </button>
+        
 
-        <button
-          className={isDislike ? "isDislike" : "dislike"}
-          onClick={dislike}
-        >
-          <span className="material-symbols-outlined">sentiment_dissatisfied</span>
-          {" "}{carrot.dislike}
+        <div className="a">
+          <button className={isLike ? "isLike" : "like"} onClick={like}>
+          <span className="material-symbols-outlined">sentiment_satisfied</span>{" "}
+          {carrot.like}
         </button>
+          <button
+            className={isDislike ? "isDislike" : "dislike"}
+            onClick={dislike}
+          >
+            <span className="material-symbols-outlined">
+              sentiment_dissatisfied
+            </span>{" "}
+            {carrot.dislike}
+          </button>
+        </div>
+
+        <div className="view">
+          <p>Views:{carrot.views}</p>
+        </div>
       </div>
 
       <div className="commentbar">
@@ -63,7 +69,7 @@ const Stamen = ({ carrot }) => {
         carrot.comment.map((reply) => (
           <div className="comment" key={reply.index}>
             <div className="commentName">
-              <img src={reply.replyPic} alt={reply.name} /> 
+              <img src={reply.replyPic} alt={reply.name} />
               <p>{reply.name}</p>
             </div>
             <div className="commentReply">{reply.reply}</div>

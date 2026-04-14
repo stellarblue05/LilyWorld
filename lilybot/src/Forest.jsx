@@ -74,7 +74,7 @@ function Forest() {
 
         <div className="app-Iris">
           <button className="desktop-Iris" onClick={irisHarvest}><img src="/img/Calculator.png"  /></button>
-          <p> Calculator </p>
+          <p> Browser </p>
         </div>
 
         <div className="app-Tulip">
@@ -83,12 +83,12 @@ function Forest() {
         </div>
 
         <div className='app-Carnation'>
-          <button className="desktop-Carnation" onClick={carnationHarvest}><img src="/img/Cat.png" /></button>
+          <button className="desktop-Carnation" onClick={carnationHarvest}><img src="/img/Commonnet.png" /></button>
           <p> CommonNet </p>
         </div>
 
        <div className="app-Peony">
-          <button className="desktop-Peony" onClick={peonyHarvest}><img src="/img/Banana.png"  /></button>
+          <button className="desktop-Peony" onClick={peonyHarvest}><img src="/img/Settings.png"  style={{imageRendering: 'pixelated'}}/></button>
           <p> Settings </p>
         </div>
 

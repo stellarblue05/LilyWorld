@@ -157,12 +157,12 @@ const Lilium = ({ isCarnation, T }) => {
   async function Carnation() {
     if (timeRef.current) clearTimeout(timeRef.current);
 
-    stop();
-    setLock(true);
-    setOut(true);
-    lockRef.current = true;
-
     if (CNcount.current === 1) {
+      setInput(false);
+      setLock(true);
+      setOut(true);
+      lockRef.current = true;
+
       const sequence = [
         "CommonNet?",
         "I also have a CN account too",
@@ -174,12 +174,12 @@ const Lilium = ({ isCarnation, T }) => {
         setWord(text);
         await wait(T);
       }
-    }
 
-    setOut(false);
-    setLock(false);
-    lockRef.current = false;
-    start();
+      setOut(false);
+      setLock(false);
+      lockRef.current = false;
+      start();
+    }
   }
 
   async function Idle() {
@@ -187,7 +187,7 @@ const Lilium = ({ isCarnation, T }) => {
 
     //0 1 2
     const behavior = Math.floor(Math.random() * 50);
-    
+
     if (behavior === 0) {
       setWord("...");
       await wait(T);
