@@ -1,0 +1,131 @@
+.Sunflower{
+  --white-blue: rgb(233, 239, 255);
+  --very-light-blue:rgb(178, 200, 255);
+  --light-blue: rgb(89, 100, 255);
+  --Primary-Blue: rgb(69, 113, 207);
+}
+
+.Sunflower .handle{
+  height: 30px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: var(--light-blue);
+}
+
+.Sunflower .handle div{
+  margin-top: 3px;
+}
+
+.Sunflower .handle p{
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Sunflower .handle .fullButton{
+  width: 30px;
+  font-weight: bolder;
+  color: white;
+  background-color: var(--very-light-blue);
+}
+
+.Sunflower .handle .Xbutton{
+  font-weight: bolder;
+  background-color: rgb(255, 53, 120);
+}
+
+.Sunflower .appbody{
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 450px;
+  height: 200px;
+  border-radius: 0px 0px 5px 5px;
+  border: 2px solid rgba(255, 255, 255, 0.342);
+  background:linear-gradient(180deg, rgba(255, 255, 255, 0.211), transparent);
+  backdrop-filter: blur(4px);
+
+}
+
+
+.Sunflower nav{
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.545);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Sunflower nav span{
+  color: var(--Primary-Blue);
+  font-weight: bolder;
+}
+
+.Sunflower nav button{
+  height: 30px;
+  background-color: transparent;
+  border: none;
+}
+.Sunflower ul {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  gap: 10px;
+  color:  var(--Primary-Blue);
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(157, 135, 255, 0.538);
+}
+
+.Sunflower li{
+  cursor: pointer;
+}
+
+.Sunflower .main{
+  margin: 5px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.Sunflower .main .file{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.Sunflower .main div > button{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.Sunflower .main button > img{
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.236);
+  &:hover{
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.107);
+  }
+}
+
+.Sunflower .main div > p{
+  line-height: 0px;
+  font-weight: 600;
+  font-size: 10px;
+  color: rgb(164, 255, 244);
+  color: azure;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.434);
+}
+
+
+

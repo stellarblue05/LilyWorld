@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-
+import './Clock.css'
 const Clock = (props) => {
 
     const [time, setTime] = useState(new Date());
@@ -18,7 +18,14 @@ const Clock = (props) => {
         const hours = time.getHours()
         const minutes = time.getMinutes()
         const seconds = time.getSeconds()
-        return `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+        return `${padZero(hours)}:${padZero(minutes)}`;
+    }
+
+    function formatDate(){
+        const year = time.getFullYear();
+        const month = time.getMonth() + 1;
+        const day = time.getDate();
+        return `${padZero(day)}/${padZero(month)}/${padZero(year)}`;
     }
 
     function padZero(num) {
@@ -26,8 +33,9 @@ const Clock = (props) => {
     }
     
     return (
-        <div>
+        <div className='clock'>
             <p className='time'>{formatTime()}</p>
+            <p className='date'>{formatDate()}</p>
         </div>
     );
 }

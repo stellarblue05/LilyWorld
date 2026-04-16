@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "img": "img/Commonnet.png",
+        "n": "Commonnet_Icon"
+    },
+    {
+        "id": 2,
+        "img": "img/Lily.png",
+        "n": "LilyWorld_Icon"
+    },
+    {
+        "id": 3,
+        "img": "img/Settings.png",
+        "n": "Settings_Icon"
+    },
+    {
+        "id": 4,
+        "img": "img/Paint.png",
+        "n": "Paint_Icon"
+    },
+    {
+        "id": 5,
+        "img": "img/txt.png",
+        "n": "textFiles_icon"
+    },
+    {
+        "id": 6,
+        "img": "img/folder.png",
+        "n": "Folder_Icon"
+    },
+    {
+        "id": 7,
+        "img": "img/Cursor.png",
+        "n": "CN_cursor"
+    },
+    {
+        "id": 8,
+        "img": "img/Lily/Base.png",
+        "n": "Lily"
+    }
+]

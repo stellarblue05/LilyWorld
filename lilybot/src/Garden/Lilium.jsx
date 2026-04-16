@@ -9,6 +9,7 @@ const Lilium = ({ isCarnation, T }) => {
   //1 = right -1 = left 0 = stop
   const [direction, setDirection] = useState(1);
   const [lock, setLock] = useState(false);
+  const [istalk, setIsTalk] = useState(false);
 
   const posRef = useRef({ x: 0, y: -25 });
   const idRef = useRef(null);
@@ -188,114 +189,117 @@ const Lilium = ({ isCarnation, T }) => {
     //0 1 2
     const behavior = Math.floor(Math.random() * 50);
 
-    if (behavior === 0) {
-      setWord("...");
-      await wait(T);
+    setIsTalk(!istalk);
+    if (istalk) {
+      if (behavior === 0) {
+        setWord("...");
+        await wait(T);
 
-      setWord("...");
-      await wait(T);
+        setWord("...");
+        await wait(T);
 
-      setWord("I'm bored.");
-      await wait(T);
+        setWord("I'm bored.");
+        await wait(T);
 
-      setWord("*Yawns");
-      await wait(T);
-    } else if (behavior === 1) {
-      setWord("User");
-      await wait(T);
+        setWord("*Yawns");
+        await wait(T);
+      } else if (behavior === 1) {
+        setWord("User");
+        await wait(T);
 
-      setWord("Have you ever eat Pancakes before?");
-      await wait(T);
+        setWord("Have you ever eat Pancakes before?");
+        await wait(T);
 
-      setWord("How's life going out there?");
-      await wait(T);
-    } else if (behavior === 2) {
-      setWord("Do you know");
-      await wait(T);
+        setWord("How's life going out there?");
+        await wait(T);
+      } else if (behavior === 2) {
+        setWord("Do you know");
+        await wait(T);
 
-      setWord("You can change bg in settings");
-      await wait(T);
+        setWord("You can change bg in settings");
+        await wait(T);
 
-      setWord("This one suck");
-      await wait(T);
+        setWord("This one suck");
+        await wait(T);
 
-      setWord("Jk :>");
-      await wait(T);
-    } else if (behavior === 3) {
-      setWord("I'm hungry");
-      await wait(T);
-      setWord("...");
+        setWord("Jk :>");
+        await wait(T);
+      } else if (behavior === 3) {
+        setWord("I'm hungry");
+        await wait(T);
+        setWord("...");
 
-      await wait(T);
-      setWord("Click on me and press 'food' ");
-      await wait(T);
-      setWord("NOW >:(");
-      await wait(T);
-    } else if (behavior === 4) {
-      setWord("The paint app UI is sooo weird");
-      await wait(T);
-      setWord("Atleast I can fix it tho");
-      await wait(T);
-    } else if (behavior === 5) {
-      setWord("Click me sometime is okay");
-      await wait(T);
-      setWord("But don't click me to much");
-      await wait(T);
-      setWord("It's really hurt...");
-      await wait(T);
-    } else if (behavior === 6) {
-      setWord("Have you hear a song that goes like..");
-      await wait(T);
-      setWord("La La la LALA la la a a a aa aa ");
-      await wait(10000);
-      setWord("Ehe");
-      await wait(T);
-    } else if (behavior === 7) {
-      setWord("User");
-      await wait(T);
-      setWord("Once the dev said that he will put his own AI into me");
-      await wait(T);
-      setWord("Because Free API is stupid (And expensive?)");
-      await wait(T);
-      setWord("Turn out he's more stupid than that free API");
-      await wait(T);
-    } else if (behavior === 8) {
-      setWord("Fun Fact:");
-      await wait(T);
-      setWord("This is solo project");
-      await wait(T);
-      setWord("You can see by how stupid this web is");
-      await wait(T);
-      setWord("...");
-      await wait(T);
-      setWord("Am I the whole reason why is app exist");
-      await wait(T);
-    } else if (behavior === 9) {
-      setWord("Commonnet is the only thing");
-      await wait(T);
-      setWord("Related to real life I had");
-      await wait(T);
-      setWord("I have fun talking with person in CN");
-      await wait(T);
-      setWord("Because they are real like you.. user");
-      await wait(T);
-      setWord("Right?");
-      await wait(T);
-    } else if (behavior === 10) {
-      setWord("Ugh I miss Peony");
-      await wait(T);
-      setWord("I met her many years ago");
-      await wait(T);
-      setWord("She have blue eyes and pink hair");
-      await wait(T);
-      setWord("...That's me??");
-      await wait(T);
-      setWord("Then who da hell is Peony");
-      await wait(T);
-      setWord("...");
-      await wait(T);
-    } else {
-      await wait(0);
+        await wait(T);
+        setWord("Click on me and press 'food' ");
+        await wait(T);
+        setWord("NOW >:(");
+        await wait(T);
+      } else if (behavior === 4) {
+        setWord("The paint app UI is sooo weird");
+        await wait(T);
+        setWord("Atleast I can fix it tho");
+        await wait(T);
+      } else if (behavior === 5) {
+        setWord("Click me sometime is okay");
+        await wait(T);
+        setWord("But don't click me to much");
+        await wait(T);
+        setWord("It's really hurt...");
+        await wait(T);
+      } else if (behavior === 6) {
+        setWord("Have you hear a song that goes like..");
+        await wait(T);
+        setWord("La La la LALA la la a a a aa aa ");
+        await wait(10000);
+        setWord("Ehe");
+        await wait(T);
+      } else if (behavior === 7) {
+        setWord("User");
+        await wait(T);
+        setWord("Once the dev said that he will put his own AI into me");
+        await wait(T);
+        setWord("Because Free API is stupid (And expensive?)");
+        await wait(T);
+        setWord("Turn out he's more stupid than that free API");
+        await wait(T);
+      } else if (behavior === 8) {
+        setWord("Fun Fact:");
+        await wait(T);
+        setWord("This is solo project");
+        await wait(T);
+        setWord("You can see by how stupid this web is");
+        await wait(T);
+        setWord("...");
+        await wait(T);
+        setWord("Am I the whole reason why is app exist");
+        await wait(T);
+      } else if (behavior === 9) {
+        setWord("Commonnet is the only thing");
+        await wait(T);
+        setWord("Related to real life I had");
+        await wait(T);
+        setWord("I have fun talking with person in CN");
+        await wait(T);
+        setWord("Because they are real like you.. user");
+        await wait(T);
+        setWord("Right?");
+        await wait(T);
+      } else if (behavior === 10) {
+        setWord("Ugh I miss Peony");
+        await wait(T);
+        setWord("I met her many years ago");
+        await wait(T);
+        setWord("She have blue eyes and pink hair");
+        await wait(T);
+        setWord("...That's me??");
+        await wait(T);
+        setWord("Then who da hell is Peony");
+        await wait(T);
+        setWord("...");
+        await wait(T);
+      } else {
+        await wait(0);
+      }
     }
 
     /*      
@@ -313,6 +317,7 @@ const Lilium = ({ isCarnation, T }) => {
 
     console.log(behavior);
     setOut(false);
+    setIsTalk(false)
   }
 
   //When app open

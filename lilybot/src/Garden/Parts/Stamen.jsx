@@ -4,35 +4,51 @@ import "../Carnation.css";
 const Stamen = ({ carrot }) => {
   const [isLike, setIsLike] = useState(false);
   const [isDislike, setIsDislike] = useState(false);
+  const PFP = "./img/pfp/";
 
   function like() {
     setIsLike(!isLike);
-
+    if(isLike){
+      carrot.l -= 1
+    }
+    if(!isLike){
+      carrot.l += 1
+    }
     if (!isLike) setIsDislike(false);
   }
 
   function dislike() {
     setIsDislike(!isDislike);
+    if(isDislike){
+      carrot.d -= 1
+    }
+    if(!isDislike){
+      carrot.d += 1
+    }
     if (!isDislike) setIsLike(false);
   }
-  const onImageError = () => imgRef.current.src="./img/pfp/p1.png";
+  
+  const handleImgError = (e) => {
+  e.target.onerror = null;
+  e.target.src = "/img/pfp/p1.png";
+};
 
   return (
     <div className="box">
       <div className="post">
         <div className="user">
-          <img src={carrot.pfp} alt={carrot.user} />
-          <p>{carrot.user}</p>
+          <img src={PFP + carrot.p} alt={carrot.u} onError={handleImgError}/>
+          <p>{carrot.u}</p>
         </div>
         <div className="title">
-          {carrot.title}
+          {carrot.t}
           <br />
-          <span className="tags">{carrot.tags}</span>
+          <span className="tags">{carrot.g}</span>
         </div>
 
-        {carrot.image && (
+        {carrot.img && (
           <div className="image">
-            <img src={carrot.image} alt="post content" />
+            <img src={carrot.img} alt="post content" />
           </div>
         )}
       </div>
@@ -43,7 +59,7 @@ const Stamen = ({ carrot }) => {
         <div className="a">
           <button className={isLike ? "isLike" : "like"} onClick={like}>
           <span className="material-symbols-outlined">sentiment_satisfied</span>{" "}
-          {carrot.like}
+          {carrot.l}
         </button>
           <button
             className={isDislike ? "isDislike" : "dislike"}
@@ -52,12 +68,12 @@ const Stamen = ({ carrot }) => {
             <span className="material-symbols-outlined">
               sentiment_dissatisfied
             </span>{" "}
-            {carrot.dislike}
+            {carrot.d}
           </button>
         </div>
 
         <div className="view">
-          <p>Views:{carrot.views}</p>
+          <p>Views:{carrot.v}</p>
         </div>
       </div>
 
@@ -65,14 +81,14 @@ const Stamen = ({ carrot }) => {
         <p>Comment</p>
       </div>
 
-      {carrot.comment &&
-        carrot.comment.map((reply) => (
-          <div className="comment" key={reply.index}>
+      {carrot.c &&
+        carrot.c.map((reply, ) => (
+          <div className="comment" >
             <div className="commentName">
-              <img src={reply.replyPic} alt={reply.name} />
-              <p>{reply.name}</p>
+              <img src={ PFP + reply[0]} alt={reply[1]}  onError={handleImgError} />
+              <p>{reply[1]}</p>
             </div>
-            <div className="commentReply">{reply.reply}</div>
+            <div className="commentReply">{reply[2]}</div>
           </div>
         ))}
     </div>
