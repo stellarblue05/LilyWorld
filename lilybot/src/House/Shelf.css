@@ -1,0 +1,53 @@
+.Shelf {
+    background-color: rgba(17, 16, 30, 0.674);
+    width: 80vh;
+    height: 70vh;
+    border: 1px solid rgba(255, 255, 255, 0.193);
+    border-radius: 10px;
+    backdrop-filter: blur(55px);
+    padding: 5px;
+}
+
+.Shelf .head{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Shelf .app{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    color: white;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.Shelf .app p{
+    margin: 0;
+    font-size: 12px;
+}
+
+.Shelf .app button{
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    &:hover{
+        background-color: rgba(68, 68, 68, 0.482);
+    }
+}
+
+.Shelf .app img{
+    width: 50px;
+    height: 50px;
+}
+
+.Shelf > p {
+    color: white;
+    font-weight: 500;
+    margin-left: 10px;
+}

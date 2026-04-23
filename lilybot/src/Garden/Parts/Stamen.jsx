@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Carnation.css";
 
-const Stamen = ({ carrot }) => {
+const Stamen = ({ carrot , setFullPost, fullPost }) => {
   const [isLike, setIsLike] = useState(false);
   const [isDislike, setIsDislike] = useState(false);
   const PFP = "./img/pfp/";
@@ -41,6 +41,7 @@ const Stamen = ({ carrot }) => {
           <p>{carrot.u}</p>
         </div>
         <div className="title">
+          <button className="see" onClick={() => setFullPost(carrot)}>See more..</button>
           {carrot.t}
           <br />
           <span className="tags">{carrot.g}</span>
@@ -81,16 +82,22 @@ const Stamen = ({ carrot }) => {
         <p>Comment</p>
       </div>
 
-      {carrot.c &&
-        carrot.c.map((reply, ) => (
-          <div className="comment" >
+
+      
+        {carrot.c &&
+        carrot.c.map((reply, index) => (
+          <div className="c">
+          <div className="comment" key={index}>
             <div className="commentName">
               <img src={ PFP + reply[0]} alt={reply[1]}  onError={handleImgError} />
               <p>{reply[1]}</p>
             </div>
             <div className="commentReply">{reply[2]}</div>
           </div>
+          </div>
         ))}
+      
+      
     </div>
   );
 };

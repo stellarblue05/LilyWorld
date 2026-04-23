@@ -10,6 +10,7 @@ function Peony({
   BarColor,
   setBarColor,
   backgrounds,
+  setAppAlign
 }) {
   const nodeRef = useRef(null);
   const [fullscreen, setFullscreen] = useState(false);
@@ -57,7 +58,9 @@ function Peony({
                   {backgrounds &&
                     backgrounds.slice(0, 6).map((bg) => {
                       return (
-                        <button onClick={() => setBg(bg.id)}>{bg.name}</button>
+                        <button onClick={() => setBg(bg.id)} key={bg.id}>
+                          {bg.name}
+                        </button>
                       );
                     })}
                 </div>
@@ -99,6 +102,11 @@ function Peony({
                   </button>
                 </div>
               </div>
+              <hr />
+              <h3>App Align</h3>
+              <button onClick={() => setAppAlign("column")}>Column</button> 
+              <button onClick={() => setAppAlign("row")}>row</button>
+
               <hr />
               <h3>Help</h3>
               <div className="help">

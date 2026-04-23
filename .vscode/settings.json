@@ -4,8 +4,7 @@
     "style": {
       "background-position": "cover",
       "background-size": "cover",
-      "opacity": 0.05
-
+      "opacity": 0.15,
     },
     "styles": [{}, {}, {}],
     // `images` supports online and local images, as well as folders.

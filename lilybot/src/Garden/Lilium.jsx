@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+     import { useRef, useEffect, useState } from "react";
 import Xylem from "./Parts/Xylem.jsx";
 import "./Lilium.css";
 
@@ -320,6 +320,7 @@ const Lilium = ({ isCarnation, T }) => {
     setIsTalk(false)
   }
 
+  /*
   //When app open
   useEffect(() => {
     if (isCarnation) {
@@ -327,6 +328,7 @@ const Lilium = ({ isCarnation, T }) => {
       Carnation();
     }
   }, [isCarnation]);
+  */
 
   //Random speed and direction swap every loop
   useEffect(() => {

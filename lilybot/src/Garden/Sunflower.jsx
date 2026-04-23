@@ -105,9 +105,9 @@ function Basalt({ isForgetMeNot, setIsForgetMeNot, setPage, isOb, setIsOb }) {
           </div>
           <div className="file">
             <button onClick={() => setIsOb(!isOb)}>
-              <img src="img/txt.png" alt="Diary" />
+              <img src="img/txt.png" alt="Credits" />
             </button>
-            <p>My_NoteBook</p>
+            <p>Credits</p>
           </div>
         </div>
       </div>
