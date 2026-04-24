@@ -98,7 +98,7 @@ function Forest() {
     {
       id: 0,
       name: "Lily World",
-      img: "/img/Lily.png",
+      img: `${import.meta.env.BASE_URL}img/Lily.png`,
       style: {},
       onClick: lilyHarvest,
       is: isBloom,
@@ -107,7 +107,7 @@ function Forest() {
     {
       id: 1,
       name: "My Computer",
-      img: "/img/PC.png",
+      img: `${import.meta.env.BASE_URL}img/PC.png`,
       style: { imageRendering: "pixelated" },
       onClick: () => setIsSunflower(!isSunflower),
       is: isSunflower,
@@ -116,7 +116,7 @@ function Forest() {
     {
       id: 2,
       name: "Tools",
-      img: "/img/Calculator.png",
+      img: `${import.meta.env.BASE_URL}/img/Calculator.png`,
       style: {},
       onClick: irisHarvest,
       is: isIris,
@@ -125,7 +125,7 @@ function Forest() {
     {
       id: 3,
       name: "CommonNet",
-      img: "/img/Commonnet.png",
+      img: `${import.meta.env.BASE_URL}/img/Commonnet.png`,
       style: {},
       onClick: carnationHarvest,
       is: isCarnation,
@@ -134,7 +134,7 @@ function Forest() {
     {
       id: 4,
       name: "Settings",
-      img: "/img/Settings.png",
+      img: `${import.meta.env.BASE_URL}/img/Settings.png`,
       style: { imageRendering: "pixelated" },
       onClick: peonyHarvest,
       is: isPeony,
@@ -143,7 +143,7 @@ function Forest() {
     {
       id: 5,
       name: "Paint",
-      img: "/img/Paint.png",
+      img: `${import.meta.env.BASE_URL}/img/Paint.png`,
       style: { imageRendering: "pixelated" },
       onClick: tulipHarvest,
       is: isTulip,
