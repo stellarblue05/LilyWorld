@@ -2,7 +2,41 @@
   "hash": "3e998c7c",
   "configHash": "d30dbfe6",
   "lockfileHash": "578d6ee4",
-  "browserHash": "1d6db404",
-  "optimized": {},
-  "chunks": {}
+  "browserHash": "0e9e46cb",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "fc6cb99a",
+      "needsInterop": true
+    },
+    "react-draggable": {
+      "src": "../../node_modules/react-draggable/build/cjs/cjs.js",
+      "file": "react-draggable.js",
+      "fileHash": "1df7d2b3",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "2a6fb414",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "599ba1cf",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "react-Na5-BvaJ": {
+      "file": "react-Na5-BvaJ.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-BKv5Y-qo": {
+      "file": "react-dom-BKv5Y-qo.js",
+      "isDynamicEntry": false
+    }
+  }
 }
