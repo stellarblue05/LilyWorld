@@ -33,6 +33,12 @@ function Obsidian({ onClick }) {
           </div>
           <div className="appbody" style={{overflow: "auto"}}>
             <div className="main"  style={{ margin: "5px", overflow: "auto" }}>
+              <div className="mySelf">
+                <a href="https://www.youtube.com/@Astellars">YouTube</a><br />
+                <a href="https://github.com/stellarblue05/LilyWorld">Github</a>
+                <br />
+                <hr />
+              </div>
               <div className="song">
                 <h4>Song/Music</h4>
                 <p>

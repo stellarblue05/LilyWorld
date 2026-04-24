@@ -147,6 +147,7 @@ function FullPost({ fullPost, setFullPost }) {
 
       <div className="commentbar">
       <p>Comment</p>
+      </div>
 
       <div className="b">
         {fullPost.c &&
@@ -160,12 +161,11 @@ function FullPost({ fullPost, setFullPost }) {
               <h6>{reply[1]}</h6>
             </div>
             
-            <div className="cR">{reply[2]}</div>
+            <div className="cR"><p>{reply[2]}</p></div>
           </div>
         ))}
         </div>
       </div>
-    </div>
   );
 }
 export default Carnation;

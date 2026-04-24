@@ -21,10 +21,10 @@ function ForgetMeNot ( {onClick} ) {
                     <div className='appbody' >
                         <div className="main" style={{margin: "10px"}}>
                                 <h3>Lily World (In Development)</h3>
-                                <p>A solo project to see what would happen for new-born large language model that lives and trains in the AI world.</p>
+                                <p>A solo project to see what would happen If the entire world is full with AI</p>
                                 <br />
                                 <p>This project code ,design, Art ,everything is create by human but the content inside it is AI</p>
-                                <br />
+                                <h3>THIS IS WORK IN PROGESS</h3>
                                 <p style={{marginLeft: "80%"}}>-Astella</p>
                         </div>
                         

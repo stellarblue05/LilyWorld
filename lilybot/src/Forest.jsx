@@ -274,6 +274,7 @@ function Forest() {
               }}
             />
           </div>
+          {/*
           {app.map((app) => {
             return (
               <div key={app.id}>
@@ -289,7 +290,7 @@ function Forest() {
                 ) : null}
               </div>
             );
-          })}
+          })}*/}
         </div>
         <div className="panel">
           {WifiOn ? (
