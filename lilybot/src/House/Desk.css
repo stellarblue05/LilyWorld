@@ -1,0 +1,272 @@
+.desk {
+  width: 100%;
+  margin: 5px;
+  height: calc(100% - 49px);
+  animation: come 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.desk .main {
+  background-color: rgba(10, 10, 27, 0.63);
+  backdrop-filter: blur(15px) saturate(160%);
+  border-radius: 10px;
+  border: 1px solid rgba(137, 137, 137, 0.507);
+  display: flex;
+  padding: 5px;
+  color: white;
+  width: 100%;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.104);
+}
+
+.desk .head {
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.desk .head .sett {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desk .head .sett button {
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.085);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.153);
+  }
+}
+
+.desk .head .sett p {
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+.desk .head .sett .on {
+  background-color: rgba(50, 67, 216, 0.747);
+  &:hover {
+    background-color: rgba(40, 40, 238, 0.634);
+  }
+}
+
+.desk .body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.desk .body .item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-left: 5px;
+}
+
+.desk .body .bar {
+  accent-color: white;
+}
+
+.desk .body .play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desk .body .item .sml span {
+  font-size: 15px;
+}
+
+.desk .body .item .big span {
+  font-size: 30px;
+}
+
+.desk .body img {
+  border-radius: 10px;
+  height: 100px;
+}
+
+.desk .body button {
+  background-color: transparent;
+  border: none;
+  transition: 0.1s ease;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+  }
+}
+
+.desk .body h3 {
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 550;
+  opacity: 0.95;
+}
+
+.desk .body p {
+  margin: 5px;
+  color: rgba(255, 255, 255, 0.737);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.desk .foot {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: start;
+  margin-left: 10px;
+  justify-content: space-around;
+  font-weight: 380;
+  font-size: 15px;
+}
+
+.desk .foot p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.862);
+  opacity: 0.9;
+}
+
+.desk .foot .time {
+  font-size: 30px;
+}
+
+.desk .color {
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.desk .leg {
+  display: flex;
+  flex-direction: column;
+  height: 235px;
+
+  width: 100%;
+}
+
+.desk .leg .mail {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #a4a4a45e transparent;
+}
+.desk .leg > p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.desk .leg .hl {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.desk .leg .hl p {
+  margin: 3px;
+}
+
+.desk .leg .bu {
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  right: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.145);
+  }
+}
+
+.desk .leg .content {
+  background-color: rgba(255, 255, 255, 0.238);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.desk .leg .content .h {
+  display: flex;
+  align-items: center;
+}
+
+.desk .leg .h img {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.desk .h .na {
+  display: flex;
+  flex-direction: column;
+}
+.desk .leg .na .a {
+  font-size: 10px;
+  margin: 0;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.desk .leg .na .n {
+  margin: 0;
+  font-weight: 500;
+}
+
+.desk .leg .b {
+  margin: 0;
+  margin-left: 10px;
+  position: relative;
+}
+
+.desk .leg .t {
+  font-weight: 500;
+  font-size: 1.1em;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.desk .leg .c {
+  font-weight: 300;
+  font-size: 0.9em;
+  margin: 5px;
+}
+
+.desk .leg .d {
+  font-size: 0.7em;
+  font-weight: 200;
+}
+@keyframes come {
+  0% {
+    transform: translateX(1.25em);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

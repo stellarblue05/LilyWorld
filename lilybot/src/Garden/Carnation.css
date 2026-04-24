@@ -1,0 +1,485 @@
+.carnation {
+  --white-carnation: rgb(255, 254, 239);
+  --light-carnation: rgb(255, 253, 208);
+  --primary-carnation: #ffed86;
+  --dark-carnation: #f4c430;
+  --very-dark-carnation: #cc780b;
+  --black-carnation: #3d3900;
+}
+.carnation .handle {
+  background: linear-gradient(
+    180deg,
+    var(--dark-carnation),
+    var(--very-dark-carnation)
+  );
+  padding-bottom: 10px;
+  border-radius: 3px;
+  border: #fff12a45 solid 2px;
+}
+
+
+.carnation .handle .Xbutton {
+  background-color: #d05d24;
+  font-weight: 600;
+  height: 30px;
+}
+
+.carnation .handle .Xbutton:hover {
+  background-color: #c75426;
+}
+
+.carnation .handle .fullButton {
+  background-color: #ffecc6;
+  height: 30px;
+  width: 30px;
+}
+
+.carnation .handle .fullButton:hover {
+  background-color: #ffe2b9;
+}
+
+.carnation .handle div {
+  top: -18px;
+  font-weight: 600;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  background: var(--primary-carnation);
+  border-radius: 20px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 10px;
+  z-index: 9;
+}
+
+.carnation .handle div p {
+  margin-bottom: 15px;
+  color: var(--black-carnation);
+}
+
+.carnation .handle div:hover {
+  font-style: italic;
+}
+
+.carnation .appbody {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  color: var(--black-carnation);
+  border-radius: 3px;
+  cursor: url("/img/Cursor.png"), auto;
+  overflow-x: hidden;
+}
+
+.carnation .header {
+  height: 25%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./img/Happy.png);
+  color: white;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.carnation .header p {
+  margin-left: 25px;
+  color: rgba(255, 255, 255, 0.905);
+}
+
+.carnation .header h1 {
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.carnation .appbody::selection {
+  background-color: var(--dark-carnation);
+  color: white;
+}
+
+.carnation .noWifi{
+  margin: 5px;
+  font-weight: bold;
+  color: rgb(59, 59, 59);
+}
+
+.carnation .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carnation .firstBox {
+  display: flex;
+  max-width: 500px;
+  background-color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 99%;
+  background-color: white;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.216);
+  height: 50px;
+  align-items: center;
+  overflow-x: hidden;
+  justify-content: space-between;
+}
+
+.carnation .firstBox button {
+  border: none;
+  border-radius: 30px;
+  height: 80%;
+  margin-left: 5px;
+  color: #3d1900;
+  transition: 0.2s;
+  margin-right: 5px;
+}
+
+.carnation .firstBox button:hover {
+  background-color: var(--dark-carnation);
+  color: white;
+}
+
+.carnation .firstBox .friend {
+  min-width: 20%;
+  border-radius: 15px;
+}
+
+.carnation .firstBox input {
+  border: 2px solid var(--primary-carnation);
+  border-radius: 20px;
+  width: 50%;
+  height: 80%;
+  margin-left: 5px;
+  transition: 0.2s ease;
+}
+
+.carnation .firstBox input:focus {
+  outline: none;
+  border: 2px solid rgb(255, 138, 42);
+}
+
+.carnation .MainBox{
+   position: absolute;
+   height: 60%;
+}
+
+
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5px;
+  max-width: 500px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 99%;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.216);
+}
+
+.box .post {
+  width: 100%;
+
+  padding-bottom: 10px;
+}
+.box .user {
+  margin-top: 5px;
+  color: var(--black-carnation);
+  display: flex;
+  align-content: center;
+  font-weight: bold;
+}
+
+.user p {
+  transition: 0.2s ease;
+}
+
+.box .user p:hover {
+  color: #f4c430;
+  text-decoration: underline;
+}
+
+ .user img {
+  height: 50px;
+  border: 0.5px solid var(--black-carnation);
+  margin: 1px;
+  border-radius: 50%;
+  width: 50px;
+  margin-left: 5px;
+}
+
+.user > p {
+  font-size: 1rem;
+  margin-left: 5px;
+}
+
+.post .title {
+  margin-left: 5px;
+  margin-top: 3px;
+  color: var(--black-carnation);
+  font-weight: 430;
+  position: relative;
+}
+
+ .carnation .tags {
+  color: #f4c430;
+  font-weight: 600;
+}
+
+ .post .image {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+ .post .image img {
+  width: 100%;
+  height: fit-content;
+  max-width: 500px;
+  max-height: 300px;
+}
+
+.postbar {
+  display: flex;
+  height: 30px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  justify-content: space-between;
+}
+
+.postbar button {
+  border: none;
+  color: gray;
+  background-color: white;
+  cursor: url("/img/Cursor.png"), auto;
+}
+
+.postbar button:hover {
+  background-color: #6969690e;
+}
+
+ .postbar .like span {
+  color: gray;
+}
+.postbar .isLike span {
+  color: rgb(255, 180, 19);
+}
+
+.postbar .dislike span {
+  color: gray;
+}
+.postbar .isDislike span {
+  color: rgb(74, 77, 255);
+}
+
+.postbar .view{
+  color: rgba(95, 95, 95, 0.666);
+  font-size: 13px;
+  margin-right: 15px;
+  font-weight: 500;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.commentbar {
+  background-color: rgba(227, 227, 227, 0.229);
+  display: flex;
+  height: 30px;
+  position: relative;
+}
+
+.commentbar p {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  color: #69696987;
+  font-weight: 360;
+  text-decoration: underline;
+}
+
+.comment {
+  padding: 15px;
+  transition: 0.2s ease;
+}
+
+.comment:hover {
+  background-color: rgba(227, 227, 227, 0.229);
+}
+
+.comment .commentName {
+  font-size: 1em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.comment .commentName p {
+  transition: 0.2s ease;
+}
+
+.comment .commentName p:hover {
+  color: #f4c430;
+  text-decoration: underline;
+}
+.comment .commentReply {
+  margin-left: 5px;
+  color: #091523bb;
+  font-size: 0.85em;
+}
+
+.comment img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.carnation .footer {
+  padding: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.carnation .footer p{
+  font-weight: 200;
+}
+
+.carnation .footer button{
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    transition: .1s ease-in-out;
+
+    background-color: white;
+    border: none;
+    &:hover{
+      background-color: rgba(89, 63, 255, 0.662);
+      color: white;
+    }
+    &:focus{
+      background-color: rgb(89, 63, 255);
+      color: white;
+    }
+}
+
+.carnation .see{
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  opacity: 0.5;
+  font-weight: 600;
+  border: 0;
+  bottom: 2px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+
+
+  text-decoration: underline;
+}
+
+.fullPost{
+  margin: 2px;
+}
+
+.fullPost .head{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 0;
+  align-items: center;
+}
+
+.fullPost .head img{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.fullPost .head p{
+  font-weight: 600;
+}
+
+.fullPost > p{
+  font-weight: 500;
+  font-size: 17px;
+  margin: 0;
+}
+
+.fullPost>img{
+  width: 100%;
+  max-height: 500px;
+  margin: 5px;
+}
+
+.fullPost .head button{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+.fullPost .head span{
+  color: var(--black-carnation);
+}
+
+.fullPost .c {
+  display: flex;
+}
+
+.commentbar {
+  margin-top: 16px;
+  padding: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.commentbar > p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.carnation .c{
+  display: flex;
+  flex-direction: column;
+ margin-bottom: 20px;
+}
+
+.carnation .cN img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.carnation .cN {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.cR {
+  margin-left: 42px;
+  font-size: 13px;
+}
+
+.carnation .cN h6{
+  font-size: 15px;
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.carnation .c p{
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}

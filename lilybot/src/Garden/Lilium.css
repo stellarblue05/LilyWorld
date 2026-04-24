@@ -1,0 +1,176 @@
+.lilum{
+    z-index: 11;
+    bottom: 125px;
+    position: absolute;
+}
+
+
+.lilum .Sprite{
+    position: absolute;
+    z-index: 21;
+    image-rendering: pixelated;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 64px;   
+    
+}
+
+
+.lilum .lily{
+    
+    backface-visibility: hidden;
+    transition: 10ms;
+}
+
+.lilum  .Walk{
+    flex-shrink: 0;
+    width: 64px;
+    height: 300px;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-size: 192px;
+    animation: Walk 1s steps(3) infinite;
+    
+}
+  
+.lilum #R{
+    background-image: url(img/Lily/WalkR.png);
+}
+
+.lilum #L{
+    transform: scaleX(-1);
+    background-image: url(img/Lily/WalkR.png);
+}
+
+.lilum .Stand{
+    background-image: url(img/Lily/Base.png);
+    flex-shrink: 0;
+    width: 64px;
+    height: 104px;
+    background-repeat: none;
+    background-size: 64px;
+}
+
+@keyframes Walk{
+    from {
+        background-position: 0px 0px;
+    
+    }to{
+        background-position: -192px 0px;
+    }
+}
+
+
+
+/*OUTPUT & INPUT element use .Xylem instead of .lilum*/
+.Xylem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Xylem .OutputBox{
+ font-weight: bold;
+ position: absolute;
+ top: -17px;
+ text-shadow: -1.5px 0 white, 0 1px white, 1px 0 white, 0 -1px white; 
+ color: var(--primary-lily);
+ &::selection{
+    color: white;
+    background-color: var(--primary-lily);
+ }
+}
+
+.Xylem .Output{
+    overflow: hidden;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    border-right: 2.5px solid transparent;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    animation: 
+        typing .5s steps(12),
+        blink 0.6s  ease-in-out .5s;
+}
+
+
+.Xylem .inputBox{
+    top: -22px;
+    right: -40px;
+    user-select: none;
+    position: absolute;
+    display: flex;
+    animation: float 4s ease-in-out infinite;
+}
+
+.Xylem .submit{
+    background-color: var(--primary-lily);
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-family: nunito, Arial, Helvetica, sans-serif;
+    &:hover{
+        background-color: var(--dark-lily);
+    }
+}
+
+.Xylem input{
+ bottom: 105px;
+ border: 2px solid var(--primary-lily);
+ transition: 0.5s ease-in-out;
+ border-radius: 5px 0px 0px 5px;
+ width: 110px;
+ 
+ &:focus{
+    border: 2px solid var(--dark-lily);
+    outline: none;
+ }
+
+ &::placeholder{
+    color: rgba(255, 124, 146, 0.54);
+ }
+}
+
+.Xylem .action{
+    position: absolute;
+    left: 80px;
+}
+
+.Xylem .action button{
+    border: none;
+    border-radius: 10px;
+    transition: .2s ease;
+    background-color: var(--primary-lily);
+    color: white;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-weight: bold;
+    user-select: none;
+    font-family: Caveat;
+    margin-top: 3px;
+    cursor: pointer;
+    &:hover{
+        background-color: var(--dark-lily);
+    }
+}
+
+
+
+@keyframes float {
+    0%{transform: translateY(0px) ;}
+    50%{transform: translateY(-2.5px);}
+    100%{transform: translateY(0px);}
+}
+
+@keyframes typing {
+    from { width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes blink{
+  from{border-right-color: rgba(255, 192, 203, 0.686);}
+  to{border-right-color: transparent;}
+}

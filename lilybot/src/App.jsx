@@ -1,12 +1,11 @@
-
-import './App.css'
+import Forest from "./Forest"
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-
+    <Forest/>
     </>
   )
 }
