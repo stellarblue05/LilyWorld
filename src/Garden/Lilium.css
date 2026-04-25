@@ -35,16 +35,16 @@
 }
   
 .lilum #R{
-    background-image: url(img/Lily/WalkR.png);
+    background-image: url(/public/img/Lily/WalkR.png);
 }
 
 .lilum #L{
     transform: scaleX(-1);
-    background-image: url(img/Lily/WalkR.png);
+    background-image: url(/public/img/Lily/WalkR.png);
 }
 
 .lilum .Stand{
-    background-image: url(img/Lily/Base.png);
+    background-image: url(/public/img/Lily/Base.png);
     flex-shrink: 0;
     width: 64px;
     height: 104px;
