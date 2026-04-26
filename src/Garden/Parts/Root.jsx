@@ -8,6 +8,8 @@ function Root({ onClick, root, app, setApp, setRoot }) {
 
   const bodyRef = useRef(null);
   const inputRef = useRef(null);
+  const handleRef = useRef(null);
+
   const [text, setText] = useState("");
   const [submit, setSubmit] = useState(null);
   const [history, setHistory] = useState([]);
@@ -40,6 +42,7 @@ function Root({ onClick, root, app, setApp, setRoot }) {
       `- ------------------ Customize --------------------------\n` +
       `- ${pad("color.text.X")} => Customize Text color\n` +
       `- ${pad("color.bg.X")} => Customize Background Color\n`+ 
+      
       `- ${pad("text.weight.X")} => Customize Text Weight\n` +
       `- ${pad("text.size.X")} => Customize Text Size\n` +
       `- ${pad("text.style.X")} => Customize Text Style\n` ,
@@ -113,8 +116,11 @@ function Root({ onClick, root, app, setApp, setRoot }) {
         else if(thing === "bg" && color){
             bodyRef.current.style.backgroundColor = color;
         }
+        else if(thing === "handle" && color){
+          handleRef.current.style.backgroundColor = color;
+        }
         else{
-            result = "Invaild type";
+          result = "Invaild type";
         }
     }
     else if(s.startsWith("text.")){
@@ -189,7 +195,7 @@ function Root({ onClick, root, app, setApp, setRoot }) {
           ref={nodeRef}
           className={`flowers${fullscreen ? "fullscreen" : ""}`}
         >
-          <div className="handle">
+          <div className="handle" ref={handleRef}>
             <div>
               <p>Control Panel</p>
             </div>
