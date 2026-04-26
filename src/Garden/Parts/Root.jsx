@@ -17,10 +17,6 @@ function Root({ onClick, root, app, setApp, setRoot }) {
 
   const pad = (str, len = 18) => str.padEnd(len, " ");
 
-
-
-
-
   const answer = {
 
     
@@ -42,7 +38,7 @@ function Root({ onClick, root, app, setApp, setRoot }) {
       `- ------------------ Customize --------------------------\n` +
       `- ${pad("color.text.X")} => Customize Text color\n` +
       `- ${pad("color.bg.X")} => Customize Background Color\n`+ 
-      
+      `- ${pad("color.handle.X")} => Customize Handle Color\n`+ 
       `- ${pad("text.weight.X")} => Customize Text Weight\n` +
       `- ${pad("text.size.X")} => Customize Text Size\n` +
       `- ${pad("text.style.X")} => Customize Text Style\n` ,
@@ -114,7 +110,7 @@ function Root({ onClick, root, app, setApp, setRoot }) {
             inputRef.current.style.color = color;
         }
         else if(thing === "bg" && color){
-            bodyRef.current.style.backgroundColor = color;
+          bodyRef.current.style.backgroundColor = color;
         }
         else if(thing === "handle" && color){
           handleRef.current.style.backgroundColor = color;
@@ -188,6 +184,7 @@ function Root({ onClick, root, app, setApp, setRoot }) {
       <Draggable
         nodeRef={nodeRef}
         handle=".handle"
+        cancel=".fullButton, .Xbutton"
         disabled={fullscreen}
         position={fullscreen ? { x: 0, y: 0 } : undefined}
       >

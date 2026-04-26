@@ -97,7 +97,7 @@ useEffect(() => {
 
     return( 
         <div className='tulip'>
-            <Draggable nodeRef={nodeRef} handle=".handle" disabled={fullscreen} position={fullscreen ? {x: 0,y: 0} : undefined}>
+            <Draggable nodeRef={nodeRef} handle=".handle" disabled={fullscreen}         cancel="button" position={fullscreen ? {x: 0,y: 0} : undefined}>
                 <div ref={nodeRef} className={`flowers${fullscreen ? "fullscreen" : ""}`}>
                     <div className="handle"> 
                         <div>

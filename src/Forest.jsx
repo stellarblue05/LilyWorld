@@ -50,8 +50,6 @@ function Forest() {
   const [WifiOn, setWifiOn] = useState(true);
   const [NoOn, setNoOn] = useState(false);
 
-
-
   const powerHarvest = () => {
     setPower(!power);
   };
@@ -102,7 +100,7 @@ function Forest() {
       style: {},
       onClick: lilyHarvest,
       is: isBloom,
-      set: setIsBloom
+      set: setIsBloom,
     },
     {
       id: 1,
@@ -111,7 +109,7 @@ function Forest() {
       style: { imageRendering: "pixelated" },
       onClick: () => setIsSunflower(!isSunflower),
       is: isSunflower,
-      set: setIsSunflower
+      set: setIsSunflower,
     },
     {
       id: 2,
@@ -120,7 +118,7 @@ function Forest() {
       style: {},
       onClick: irisHarvest,
       is: isIris,
-      set: setIsIris
+      set: setIsIris,
     },
     {
       id: 3,
@@ -129,7 +127,7 @@ function Forest() {
       style: {},
       onClick: carnationHarvest,
       is: isCarnation,
-      set: setIsCarnation
+      set: setIsCarnation,
     },
     {
       id: 4,
@@ -138,7 +136,7 @@ function Forest() {
       style: { imageRendering: "pixelated" },
       onClick: peonyHarvest,
       is: isPeony,
-      set: setIsPeony
+      set: setIsPeony,
     },
     {
       id: 5,
@@ -147,14 +145,13 @@ function Forest() {
       style: { imageRendering: "pixelated" },
       onClick: tulipHarvest,
       is: isTulip,
-      set: setIsTulip
+      set: setIsTulip,
     },
   ]);
 
   const current = backgrounds.find((b) => b.id === bg);
 
   const [root, setRoot] = useState({
-
     desk: {
       is: isDesk,
       set: setIsDesk,
@@ -179,28 +176,28 @@ function Forest() {
     PC: [
       {
         id: 0,
-        name: 'Bluetooth',
-        on: (() => setBlueOn(prev => !prev))
+        name: "Bluetooth",
+        on: () => setBlueOn((prev) => !prev),
       },
       {
         id: 1,
         name: "Airplane Mode",
-        on: (() => setAirOn(prev => !prev))
+        on: () => setAirOn((prev) => !prev),
       },
       {
         id: 2,
         name: "Save Battery",
-        on: (() => setSavOn(prev => !prev))
+        on: () => setSavOn((prev) => !prev),
       },
       {
         id: 3,
         name: "Wi-Fi",
-        on: (() => setWifiOn(prev => !prev))
+        on: () => setWifiOn((prev) => !prev),
       },
       {
         id: 4,
         name: "Do Not Disturb",
-        on: (() => setNoOn(prev => !prev))
+        on: () => setNoOn((prev) => !prev),
       },
     ],
   });
@@ -245,17 +242,26 @@ function Forest() {
       </div>
 
       <div className="root">
-        {isRoot && <Root onClick={() => setIsRoot(false)} root={root} app={app} setRoot={setRoot} setApp={setApp}/>}
+        {isRoot && (
+          <Root
+            onClick={() => setIsRoot(false)}
+            root={root}
+            app={app}
+            setRoot={setRoot}
+            setApp={setApp}
+          />
+        )}
       </div>
 
-      <div
-        className="shelf "
-        onMouseLeave={() => {
-          setIsShelf(false);
-        }}
-      >
-        {isShelf && <Shelf app={app} setIsRoot={setIsRoot} />}
-      </div>
+        {isShelf && (
+          <div className="shelfCon">
+            <div className="shelf ">
+              <Shelf app={app} setIsRoot={setIsRoot} setIsShelf={setIsShelf} />
+            </div>
+            <button className="shelfbg" onClick={() => {setIsShelf(!isShelf) } }></button>
+          </div>
+        )}
+  
 
       <div className="taskBar">
         <div className="color" style={{ backgroundColor: BarColor }}></div>

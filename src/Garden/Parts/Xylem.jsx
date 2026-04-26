@@ -10,12 +10,9 @@ const wait = (ms) => new Promise(reslove => setTimeout(reslove, ms));
 
     function Eat(){
         Submit();
-        setWord("Nom nom :p");
+        setWord("*Eats");
     }
-
-
-
-
+ 
     return (
         <div className='Xylem'>
         {input ? 
