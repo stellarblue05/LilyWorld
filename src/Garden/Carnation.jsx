@@ -95,7 +95,7 @@ function Carnation({ onClick, WifiOn }) {
 
                 {page === 1 && (
                   <>
-                       <Anther Lapis={Lapis} setPage={setPage}/>
+                       <Anther Lapis={Lapis} setPage={setPage} />
                   </>
                 )}
               </>

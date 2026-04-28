@@ -3,7 +3,7 @@
   --light-carnation: rgb(255, 253, 208);
   --primary-carnation: #ffed86;
   --dark-carnation: #f4c430;
-  --very-dark-carnation: #cc780b;
+  --very-dark-carnation: #e38e1f;
   --black-carnation: #3d3900;
   font-family:Geneva, Tahoma, sans-serif;
 }
@@ -549,6 +549,7 @@
     display: flex;
     flex-direction: column;
     position: relative;  
+    
    
 }
 
@@ -561,6 +562,7 @@
   justify-content: center;
   align-items: center;
   max-width: fit-content;
+  gap: 5px;
 }
 
 .carnation .DMfullbody .you .userHead{
@@ -612,6 +614,7 @@
 .carnation .DMfull{
   margin-top: 40px;
    background-color: white;
+   
    padding-bottom: 100px;
    box-shadow: 5px 5px 5px  5px rgba(0, 0, 0, 0.14);
 }
@@ -650,4 +653,65 @@
   width: 100%;
   height: 40px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.392);
+}
+
+.carnation .type{
+  z-index: 11;
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  border-top: 2px solid rgba(255, 230, 0, 0.392);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.carnation .type input{
+  width: 90%;
+  height: 30px;
+  border-radius: 50px;
+  padding-left: 10px;
+  margin-right: 10px;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--very-dark-carnation);
+  position: relative;
+  border: 2px solid var(--dark-carnation);
+}
+
+.carnation .type button{
+  background-color: var(--dark-carnation);
+  border: none;
+  margin-left: 5px;
+  border-radius: 100px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  transition: .2s;
+  justify-content: center;
+  &:hover{
+    background-color:  var(--very-dark-carnation);
+  }
+}
+
+.carnation .type > button{
+  position: absolute;
+  right: 0px;
+  border: none;
+  height: 35px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover{
+    background-color: var(--very-dark-carnation);
+  }
+}
+
+.carnation .type > div {
+  display: flex;
 }

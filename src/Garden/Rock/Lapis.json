@@ -31,35 +31,33 @@
     ],
     "msg": [
         {
-            "msgId": 1,
             "user": 1,
             "text": "Hi!",
             "time": "20/2/2025'12:26",
             "read": true
         },
         {
-            "msgId":2,
             "user": 0,
             "text": "Hello Ryan, How's going?",
             "time": "20/2/2025'15:38",
             "read": true
         },
         {
-            "msgId": 3,
+            
             "user": 1,
             "text": "Great! How about you?",
             "time": "20/2/2025'15:39",
             "read": true
         },
          {
-            "msgId":4,
+         
             "user": 0,
             "text": "My dog died",
             "time": "20/2/2025'15:40",
             "read": true
         },
         {
-            "msgId": 5,
+          
             "user": 1,
             "text": "🤣🤣🤣",
             "time": "20/2/2025'15:40",
@@ -107,35 +105,32 @@
     ],
     "msg": [
       {
-        "msgId": 1,
         "user": 1,
         "text": "yo you alive?",
         "time": "20/02/2025'12:01",
         "read": true
       },
       {
-        "msgId": 2,
         "user": 0,
         "text": "barely 😭 what's up",
         "time": "20/02/2025'12:03",
         "read": true
       },
       {
-        "msgId": 3,
+      
         "user": 1,
         "text": "i just saw the cutest dog ever bro",
         "time": "20/02/2025'12:05",
         "read": true
       },
       {
-        "msgId": 4,
+     
         "user": 0,
         "text": "send pic or it didn't happen",
         "time": "20/02/2025'12:06",
         "read": true
       },
       {
-        "msgId": 5,
         "user": 1,
         "text": "I FORGOT 😭😭😭",
         "time": "20/02/2025'12:07",

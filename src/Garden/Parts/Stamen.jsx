@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../Carnation.css";
 
 const Stamen = ({ carrot, setFullPost, fullPost }) => {
@@ -116,24 +116,48 @@ const Anther = ({ Lapis, setPage }) => {
     e.target.src = `${import.meta.env.BASE_URL}img/pfp/p1.png`;
   };
 
-  console.log(Chat);
+  const bottomRef = useRef(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [Chat]);
+
+  const inputRef = useRef(null);
+  function handleSubmit() {
+    const s = inputRef.current.value.trim();
+    if (s) {
+      const newMsg = {
+        text: s,
+        user: 0,
+        time: `${new Date().toLocaleDateString()}'${new Date().toLocaleTimeString()}`,
+        read: false,
+      };
+
+      setChat((prev) => ({
+        ...prev,
+        msg: [...prev.msg, newMsg],
+      }));
+      inputRef.current.value = "";
+    }
+  }
 
   return (
     <div className="Anther">
       <div className="DMnav">
-                      <button onClick={() => {Chat ? setChat(null): setPage(0)}}>
-                        <span className="material-symbols-outlined">
-                          arrow_back
-                        </span>
-                      </button>
-                      <p>Chats</p>
-                      <button>
-                        <span className="material-symbols-outlined">more_vert</span>
-                      </button>
-                    </div>
+        <button
+          onClick={() => {
+            Chat ? setChat(null) : setPage(0);
+          }}
+        >
+          <span className="material-symbols-outlined">arrow_back</span>
+        </button>
+        <p>Chats</p>
+        <button>
+          <span className="material-symbols-outlined">more_vert</span>
+        </button>
+      </div>
       {!Chat ? (
         <>
-        
           <div className="DMhead">
             <img src="img/Cat.png" alt="Profile" />
             <div className="DMneck">
@@ -161,45 +185,80 @@ const Anther = ({ Lapis, setPage }) => {
         </>
       ) : (
         <div className="DMfull">
-          
-          <div className="DMfullbody" key={Chat.msg.msgId}>
+          <div className="DMfullbody">
             {Chat.msg &&
-              Chat.msg.map((msg) => {
+              Chat.msg.map((msg, i) => {
                 const date = msg.time.split("'")[0];
                 const time = msg.time.split("'")[1];
-                return (
-                  <div className={msg.user ? "other" : "you"}>
-                    <div className="user">
-                      <div className="userHead">
-                        <img
-                          src={msg.user ? Chat.pfp : "./img/Cat.png"}
-                          alt=""
-                        />
-                        <p>{msg.user ? Chat.name : null}</p>
-                      </div>
 
-                      <div className="bubbleCon">
-                        <div className="bubble">
-                          <p>{msg.text}</p>
+                return (
+                  <>
+                    <div className={msg.user ? "other" : "you"} key={i}>
+                      <div className="user">
+                        <div className="userHead">
+                          <img
+                            src={msg.user ? Chat.pfp : "./img/Cat.png"}
+                            alt=""
+                          />
+                          <p>{msg.user ? Chat.name : null}</p>
                         </div>
-                        <div>
-                          <div className="time">
-                            <p>{date} {time}</p>
-                             <p className="read">{msg.read && msg.user ? null : "read" }</p>
+
+                        <div className="bubbleCon">
+                          <div className="bubble">
+                            <p>{msg.text}</p>
                           </div>
-                         
+                          <div>
+                            <div className="time">
+                              <p>
+                                {date} {time}
+                              </p>
+                              <p className="read">
+                                {msg.read && !msg.user ? "read" : null}
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    
-                  </div>
-                  
+                  </>
                 );
               })}
+            <div ref={bottomRef} />
           </div>
         </div>
-        
       )}
+
+      {Chat && (
+        <>
+          <div className="type">
+            <div>
+              <button>
+                <span className="material-symbols-outlined">
+                  add_photo_alternate
+                </span>
+              </button>
+              <button>
+                <span className="material-symbols-outlined">mood</span>
+              </button>
+            </div>
+            <input
+              type="text"
+              ref={inputRef}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleSubmit();
+                  inputRef.current.value = "";
+                }
+              }}
+            />
+
+            <button onClick={handleSubmit}>
+              <span className="material-symbols-outlined">arrow_upward</span>
+            </button>
+          </div>
+        </>
+      )}
+
     </div>
   );
 };
