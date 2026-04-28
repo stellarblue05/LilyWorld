@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "name": "Ryan Smith",
+    "acc": "RyanSmith123@GoMail.com",
+    "pfp": "./img/pfp/p1.png",
+    "role": "friend",
+    "verified": 0,
+    "followers": 2,
+    "following": 10,
+    "des": "Good Morning...",
+    "at": "Normal38.str, Normie",
+    "type": "human",
+    "post": [
+      {
+        "t": "Such a Great day",
+        "g": "#Happy #Ryan",
+        "l": 0,
+        "d": 0,
+        "v": 9,
+        "time": "20/02/2025'12:06"
+      },
+      {
+        "t": "Look at this cute dog",
+        "g": "#Happy #Ryan",
+        "l": 2,
+        "d": 0,
+        "v": 13,
+        "time": "10/02/2025'15:07"
+      }
+    ],
+    "msg": [
+        {
+            "msgId": 1,
+            "user": 1,
+            "text": "Hi!",
+            "time": "20/2/2025'12:26",
+            "read": true
+        },
+        {
+            "msgId":2,
+            "user": 0,
+            "text": "Hello Ryan, How's going?",
+            "time": "20/2/2025'15:38",
+            "read": true
+        },
+        {
+            "msgId": 3,
+            "user": 1,
+            "text": "Great! How about you?",
+            "time": "20/2/2025'15:39",
+            "read": true
+        },
+         {
+            "msgId":4,
+            "user": 0,
+            "text": "My dog died",
+            "time": "20/2/2025'15:40",
+            "read": true
+        },
+        {
+            "msgId": 5,
+            "user": 1,
+            "text": "🤣🤣🤣",
+            "time": "20/2/2025'15:40",
+            "read": true
+        }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Josh Fire",
+    "acc": "JoshFire999@GoMail.com",
+    "pfp": "./img/pfp/p13.png",
+    "role": "friend",
+    "verified": 0,
+    "followers": 87,
+    "following": 154,
+    "des": "low battery but still vibing 😭",
+    "at": "Neon Alley 77, Snack District",
+    "type": "bot",
+    "post": [
+      {
+        "t": "woke up at 6am for no reason 💀",
+        "g": "#SleepIsFake #WhyTho",
+        "l": 12,
+        "d": 1,
+        "v": 103,
+        "time": "19/02/2025'06:14"
+      },
+      {
+        "t": "bro this coffee carrying my life rn ☕",
+        "g": "#SurvivalMode #Coffee",
+        "l": 25,
+        "d": 0,
+        "v": 187,
+        "time": "19/02/2025'09:02"
+      },
+      {
+        "t": "saw a dog today instant serotonin 🐶",
+        "g": "#DogEnergy #Blessed",
+        "l": 48,
+        "d": 0,
+        "v": 312,
+        "time": "20/02/2025'11:50"
+      }
+    ],
+    "msg": [
+      {
+        "msgId": 1,
+        "user": 1,
+        "text": "yo you alive?",
+        "time": "20/02/2025'12:01",
+        "read": true
+      },
+      {
+        "msgId": 2,
+        "user": 0,
+        "text": "barely 😭 what's up",
+        "time": "20/02/2025'12:03",
+        "read": true
+      },
+      {
+        "msgId": 3,
+        "user": 1,
+        "text": "i just saw the cutest dog ever bro",
+        "time": "20/02/2025'12:05",
+        "read": true
+      },
+      {
+        "msgId": 4,
+        "user": 0,
+        "text": "send pic or it didn't happen",
+        "time": "20/02/2025'12:06",
+        "read": true
+      },
+      {
+        "msgId": 5,
+        "user": 1,
+        "text": "I FORGOT 😭😭😭",
+        "time": "20/02/2025'12:07",
+        "read": true
+      }
+    ]
+  }
+
+
+]

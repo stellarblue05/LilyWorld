@@ -34,7 +34,6 @@ const Stamen = ({ carrot, setFullPost, fullPost }) => {
     e.target.src = `${import.meta.env.BASE_URL}img/pfp/p1.png`;
   };
 
-  
   return (
     <div className="box">
       <div className="post">
@@ -67,7 +66,7 @@ const Stamen = ({ carrot, setFullPost, fullPost }) => {
             <span className="material-symbols-outlined">
               sentiment_satisfied
             </span>{" "}
-            {carrot.l.toLocaleString('en-US')}
+            {carrot.l.toLocaleString("en-US")}
           </button>
           <button
             className={isDislike ? "isDislike" : "dislike"}
@@ -76,12 +75,12 @@ const Stamen = ({ carrot, setFullPost, fullPost }) => {
             <span className="material-symbols-outlined">
               sentiment_dissatisfied
             </span>{" "}
-            {carrot.d.toLocaleString('en-US')}
+            {carrot.d.toLocaleString("en-US")}
           </button>
         </div>
 
         <div className="view">
-          <p>Views:{carrot.v.toLocaleString('en-US')}</p>
+          <p>Views:{carrot.v.toLocaleString("en-US")}</p>
         </div>
       </div>
 
@@ -109,14 +108,100 @@ const Stamen = ({ carrot, setFullPost, fullPost }) => {
   );
 };
 
+const Anther = ({ Lapis, setPage }) => {
+  const [Chat, setChat] = useState(null);
 
-const Anther = ({setPage}) => {
+  const handleImgError = (e) => {
+    e.target.onerror = null;
+    e.target.src = `${import.meta.env.BASE_URL}img/pfp/p1.png`;
+  };
+
+  console.log(Chat);
+
   return (
-    <div>
-      Yo
+    <div className="Anther">
+      <div className="DMnav">
+                      <button onClick={() => {Chat ? setChat(null): setPage(0)}}>
+                        <span className="material-symbols-outlined">
+                          arrow_back
+                        </span>
+                      </button>
+                      <p>Chats</p>
+                      <button>
+                        <span className="material-symbols-outlined">more_vert</span>
+                      </button>
+                    </div>
+      {!Chat ? (
+        <>
+        
+          <div className="DMhead">
+            <img src="img/Cat.png" alt="Profile" />
+            <div className="DMneck">
+              <input type="text" />
+            </div>
+            <button>
+              <span className="material-symbols-outlined">notifications</span>
+            </button>
+          </div>
+          {Lapis &&
+            Lapis.map((Lapis) => (
+              <div className="DMbody" key={Lapis.id}>
+                <img
+                  src={Lapis.pfp}
+                  alt={Lapis.name}
+                  onError={handleImgError}
+                />
+                <div className="DMname">
+                  <p>{Lapis.name}</p>
+                  <p>{Lapis.msg?.at(-1)?.text || null}</p>
+                </div>
+                <button onClick={() => setChat(Lapis)}></button>
+              </div>
+            ))}
+        </>
+      ) : (
+        <div className="DMfull">
+          
+          <div className="DMfullbody" key={Chat.msg.msgId}>
+            {Chat.msg &&
+              Chat.msg.map((msg) => {
+                const date = msg.time.split("'")[0];
+                const time = msg.time.split("'")[1];
+                return (
+                  <div className={msg.user ? "other" : "you"}>
+                    <div className="user">
+                      <div className="userHead">
+                        <img
+                          src={msg.user ? Chat.pfp : "./img/Cat.png"}
+                          alt=""
+                        />
+                        <p>{msg.user ? Chat.name : null}</p>
+                      </div>
+
+                      <div className="bubbleCon">
+                        <div className="bubble">
+                          <p>{msg.text}</p>
+                        </div>
+                        <div>
+                          <div className="time">
+                            <p>{date} {time}</p>
+                             <p className="read">{msg.read && msg.user ? null : "read" }</p>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                );
+              })}
+          </div>
+        </div>
+        
+      )}
     </div>
   );
-}
-
+};
 
 export { Stamen, Anther };

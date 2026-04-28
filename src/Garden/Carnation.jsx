@@ -2,6 +2,7 @@ import Draggable from "react-draggable";
 import { useRef, useState, useEffect, useMemo } from "react";
 import Carrot from "./Carrot.json";
 import "./Carnation.css";
+import Lapis from "./Rock/Lapis.json";
 import { Stamen, Anther } from "./Parts/Stamen";
 
 function Carnation({ onClick, WifiOn }) {
@@ -50,19 +51,15 @@ function Carnation({ onClick, WifiOn }) {
               </div>
             ) : (
               <>
-                {page === 0 && !page && (
-                  <div>
+                {page === 0 && !page ? (
+                  <>
                     <div className="header">
                       <h1>CommonNet</h1>
                       <p>User note: likes post that is human?, dislike bot</p>
                     </div>
-
                     <div className="main">
                       <div className="firstBox">
-                        <button
-                          className="friend"
-                          onClick={() => setPage(1)}
-                        >
+                        <button className="friend" onClick={() => setPage(1)}>
                           Message
                         </button>
 
@@ -93,10 +90,14 @@ function Carnation({ onClick, WifiOn }) {
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
+                  </>
+                ) : null}
 
-                {page === 1 && <Anther setPage={setPage} />}
+                {page === 1 && (
+                  <>
+                       <Anther Lapis={Lapis} setPage={setPage}/>
+                  </>
+                )}
               </>
             )}
           </div>
