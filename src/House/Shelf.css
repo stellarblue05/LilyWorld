@@ -6,6 +6,7 @@
     border-radius: 10px;
     backdrop-filter: blur(55px);
     padding: 5px;
+    z-index: 2;
 }
 
 .Shelf .head{
@@ -51,3 +52,4 @@
     font-weight: 500;
     margin-left: 10px;
 }
+

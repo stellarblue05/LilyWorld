@@ -9,7 +9,7 @@ function ForgetMeNot ( {onClick} ) {
 
     return(
         <>
-            <Draggable nodeRef={nodeRef} handle=".handle" disabled={fullscreen} position={fullscreen ? {x: 0,y: 0} : undefined}>
+            <Draggable nodeRef={nodeRef} handle=".handle" disabled={fullscreen} cancel=".fullButton, .Xbutton" position={fullscreen ? {x: 0,y: 0} : undefined}>
                 <div ref={nodeRef} className={`flowers${fullscreen ? "fullscreen" : ""}`}>
                     <div className="handle"> 
                         <div>

@@ -2,43 +2,25 @@ import Draggable from "react-draggable";
 import { useRef, useState, useEffect, useMemo } from "react";
 import Carrot from "./Carrot.json";
 import "./Carnation.css";
-import Stamen from "./Parts/Stamen";
+import Lapis from "./Rock/Lapis.json";
+import { Stamen, Anther } from "./Parts/Stamen";
 
 function Carnation({ onClick, WifiOn }) {
   const nodeRef = useRef(null);
   const [fullscreen, setFullscreen] = useState(false);
-  const [fullPost, setFullPost] = useState(null);
+
   const shuffled = useMemo(() => {
     return [...Carrot].sort(() => Math.random() - 0.5);
   }, [Carrot]);
 
-    function like() {
-    setIsLike(!isLike);
-    if(isLike){
-      carrot.l -= 1
-    }
-    if(!isLike){
-      carrot.l += 1
-    }
-    if (!isLike) setIsDislike(false);
-  }
+  const [page, setPage] = useState(0);
 
-  function dislike() {
-    setIsDislike(!isDislike);
-    if(isDislike){
-      carrot.d -= 1
-    }
-    if(!isDislike){
-      carrot.d += 1
-    }
-    if (!isDislike) setIsLike(false);
-  }
-  
   return (
     <div className="carnation">
       <Draggable
         nodeRef={nodeRef}
         handle=".handle"
+        cancel="button"
         disabled={fullscreen}
         position={fullscreen ? { x: 0, y: 0 } : undefined}
       >
@@ -69,9 +51,7 @@ function Carnation({ onClick, WifiOn }) {
               </div>
             ) : (
               <>
-                {fullPost ? (
-                  <FullPost fullPost={fullPost} setFullPost={setFullPost}/>
-                ) : (
+                {page === 0 && !page ? (
                   <>
                     <div className="header">
                       <h1>CommonNet</h1>
@@ -79,37 +59,43 @@ function Carnation({ onClick, WifiOn }) {
                     </div>
                     <div className="main">
                       <div className="firstBox">
-                        <button className="friend">Add friend</button>{" "}
+                        <button className="friend" onClick={() => setPage(1)}>
+                          Message
+                        </button>
+
                         <input
                           type="text"
                           placeholder="What's on your mind today?"
-                        />{" "}
-                        <button>Profile</button> <button>Manage</button>
+                        />
+
+                        <button>Profile</button>
+                        <button>Manage</button>
                       </div>
+
                       <div className="mainBox">
                         {Carrot &&
-                          shuffled.map((carrot) => {
-                            return (
-                              <Stamen
-                                key={carrot.id}
-                                fullPost={fullPost}
-                                setFullPost={setFullPost}
-                                carrot={carrot}
-                              />
-                            );
-                          })}
+                          shuffled.map((carrot) => (
+                            <Stamen key={carrot.id} carrot={carrot} />
+                          ))}
+
+                        <div className="footer">
+                          <p>How many post do you think is ai?</p>
+                          <div className="button">
+                            <button>40%</button>
+                            <button>60%</button>
+                            <button>90%</button>
+                            <button>100%</button>
+                            <button>FREE JOE</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="footer">
-                      <p>How many post do you think is ai?</p>
-                      <div className="button">
-                        <button>40%</button>
-                        <button>60%</button>
-                        <button>90%</button>
-                        <button>100%</button>
-                        <button>FREE JOE</button>
-                      </div>
-                    </div>
+                  </>
+                ) : null}
+
+                {page === 1 && (
+                  <>
+                       <Anther Lapis={Lapis} setPage={setPage} />
                   </>
                 )}
               </>
@@ -121,51 +107,4 @@ function Carnation({ onClick, WifiOn }) {
   );
 }
 
-function FullPost({ fullPost, setFullPost }) {
-  if (!fullPost) return null;
-
-  return (
-    <div className="fullPost">
-      <div className="head">
-        <img
-          src={"/img/pfp/" + fullPost.p}
-          alt={fullPost.u}
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = "/img/pfp/p1.png";
-          }}
-        />
-        <p>{fullPost.u}</p>
-        <button onClick={() => setFullPost(null)}>
-          <span className="material-symbols-outlined">arrow_forward_ios</span>
-        </button>
-      </div>
-      <hr />
-      <p>{fullPost.co || fullPost.t}</p>
-      <span className="tags">{fullPost.g}</span>
-      {fullPost.img && <img src={fullPost.img} alt={fullPost.t} />}
-
-      <div className="commentbar">
-      <p>Comment</p>
-      </div>
-
-      <div className="b">
-        {fullPost.c &&
-        fullPost.c.map((reply, index) => (
-          <div className="c" key={index || reply.id}>
-            <div className="cN">
-              <img src={ "/img/pfp/" + reply[0]} alt={reply[1]}  onError={(e) =>{
-                e.target.onerror = null;
-                e.target.src = "/img/pfp/p1.png";
-              }} />
-              <h6>{reply[1]}</h6>
-            </div>
-            
-            <div className="cR"><p>{reply[2]}</p></div>
-          </div>
-        ))}
-        </div>
-      </div>
-  );
-}
 export default Carnation;

@@ -1,16 +1,17 @@
 import React from "react";
 import "./Shelf.css";
 
-const Shelf = ({ app , setIsRoot }) => {
+const Shelf = ({ app , setIsRoot, setIsShelf }) => {
   return (
+    <>
     <div className="Shelf">
         <p>Application</p>
       <div className="head">
         {app.map((app) => {
           return (
               <div key={app.id} className="app">
-                <button onClick={app.onClick}>
-                  <img src={app.img} alt={app.name} style={app.style} />
+                <button onClick={app.onClick} >
+                  <img src={app.img} alt={app.name} style={app.style} onClick={() => setIsShelf(false)}/>
                 </button>
                 <p>{app.name}</p>
               </div>          );
@@ -25,8 +26,11 @@ const Shelf = ({ app , setIsRoot }) => {
             </button>
             <p>Command Panel</p>
         </div>
+        
       </div>
+      
     </div>
+    </>
   );
 };
 

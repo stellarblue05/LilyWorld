@@ -1,3 +1,4 @@
+
 import Draggable from "react-draggable";
 import { useRef, useState, useContext } from "react";
 import "./Sunflower.css";
@@ -22,6 +23,7 @@ function Sunflower({
       <Draggable
         nodeRef={nodeRef}
         handle=".handle"
+                cancel="button"
         disabled={fullscreen}
         position={fullscreen ? { x: 0, y: 0 } : undefined}
       >

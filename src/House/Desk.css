@@ -71,6 +71,7 @@
   flex-direction: column;
   margin: 0;
   margin-left: 5px;
+  max-width: 90%;
 }
 
 .desk .body .bar {
@@ -262,6 +263,8 @@
   font-size: 0.7em;
   font-weight: 200;
 }
+
+
 @keyframes come {
   0% {
     transform: translateX(1.25em);

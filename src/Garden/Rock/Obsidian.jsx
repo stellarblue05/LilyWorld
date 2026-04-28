@@ -10,6 +10,7 @@ function Obsidian({ onClick }) {
       <Draggable
         nodeRef={nodeRef}
         handle=".handle"
+        cancel=".fullButton, .Xbutton"
         disabled={fullscreen}
         position={fullscreen ? { x: 0, y: 0 } : undefined}
       >
